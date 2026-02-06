@@ -718,7 +718,11 @@ class MissionControl {
         const colors = {
             'opus': '#8b5cf6',
             'sonnet': '#3b82f6',
-            'haiku': '#22c55e'
+            'haiku': '#22c55e',
+            'minimax': '#f59e0b',
+            'deepseek': '#ef4444',
+            'kimi': '#ec4899',
+            'gemini': '#06b6d4'
         };
         
         container.innerHTML = byModel.map(model => {
