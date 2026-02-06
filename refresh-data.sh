@@ -30,27 +30,38 @@ fi
 
 # 3. Parse OpenClaw logs for model usage (last 7 days)
 echo "🤖 Parsing model usage from logs..."
-MODEL_USAGE='{"sessions":[],"byModel":{},"dailyTotals":[]}'
+MODEL_USAGE='{"byModel":[],"dailyCounts":[]}'
 LOG_DIR="/tmp/openclaw"
 if [ -d "$LOG_DIR" ]; then
-  # Count sessions by looking for "embedded run start" entries with model info
-  SESSIONS=$(find "$LOG_DIR" -name "openclaw-*.log" -mtime -7 2>/dev/null | while read logfile; do
-    grep -o '"model":"[^"]*"' "$logfile" 2>/dev/null
-  done | sort | uniq -c | sort -rn | head -10 | while read count model; do
-    model_name=$(echo "$model" | sed 's/"model":"//g' | sed 's/"//g')
-    echo "{\"model\":\"$model_name\",\"count\":$count}"
-  done | jq -s '.' 2>/dev/null || echo '[]')
+  # Count model usage by grepping for model names
+  OPUS_COUNT=$(grep -oh 'claude-opus' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
+  SONNET_COUNT=$(grep -oh 'claude-sonnet' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
+  HAIKU_COUNT=$(grep -oh 'claude-haiku' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
   
-  # Get session counts per day
+  BY_MODEL='['
+  [ "$OPUS_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"opus\",\"count\":$OPUS_COUNT},"
+  [ "$SONNET_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"sonnet\",\"count\":$SONNET_COUNT},"
+  [ "$HAIKU_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"haiku\",\"count\":$HAIKU_COUNT},"
+  BY_MODEL=$(echo "$BY_MODEL" | sed 's/,$//')
+  BY_MODEL="${BY_MODEL}]"
+  
+  # Get daily session counts (approximate - count unique timestamps per day)
   DAILY_COUNTS=$(find "$LOG_DIR" -name "openclaw-*.log" -mtime -7 2>/dev/null | while read logfile; do
     date_str=$(basename "$logfile" | sed 's/openclaw-//g' | sed 's/.log//g')
-    count=$(grep -c "embedded run start" "$logfile" 2>/dev/null || echo 0)
-    echo "{\"date\":\"$date_str\",\"sessions\":$count}"
+    # Count lines with "tool" field as proxy for activity
+    count=$(grep -c '"tool"' "$logfile" 2>/dev/null || echo "1")
+    if [ "$count" -gt 0 ]; then
+        sessions=$((count / 10))  # Rough estimate: divide by avg tools per session
+        [ $sessions -lt 1 ] && sessions=1
+    else
+        sessions=1
+    fi
+    echo "{\"date\":\"$date_str\",\"sessions\":$sessions}"
   done | jq -s '.' 2>/dev/null || echo '[]')
   
   MODEL_USAGE=$(cat <<EOF
 {
-  "byModel": $SESSIONS,
+  "byModel": $BY_MODEL,
   "dailyCounts": $DAILY_COUNTS
 }
 EOF
