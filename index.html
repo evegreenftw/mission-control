@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Mission Control</h1>
+                <span class="version">v2.0</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-item active" data-view="dashboard">
+                    <span class="nav-icon">◉</span>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item" data-view="calendar">
+                    <span class="nav-icon">◎</span>
+                    Calendar
+                </a>
+                <a href="#" class="nav-item" data-view="tasks">
+                    <span class="nav-icon">◈</span>
+                    Tasks
+                </a>
+                <a href="#" class="nav-item" data-view="spend">
+                    <span class="nav-icon">◇</span>
+                    Model Spend
+                </a>
+                <a href="#" class="nav-item" data-view="activity">
+                    <span class="nav-icon">◌</span>
+                    Activity
+                </a>
+            </nav>
+            
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h4>Quick Actions</h4>
+                <button class="quick-btn" onclick="app.quickRefresh()">
+                    <span>⟳</span> Refresh Data
+                </button>
+                <button class="quick-btn" onclick="app.openAddModal('task')">
+                    <span>+</span> New Task
+                </button>
+                <button class="quick-btn" onclick="app.exportData()">
+                    <span>↓</span> Export
+                </button>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="status-dot online" id="statusDot"></span>
+                    <span id="statusText">Eve Online</span>
+                </div>
+                <div class="weather-mini" id="weatherMini"></div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h2 class="page-title" id="pageTitle">Dashboard</h2>
+                    <span class="timestamp" id="timestamp"></span>
+                </div>
+                <div class="header-right">
+                    <div class="header-stats">
+                        <div class="header-stat">
+                            <span class="header-stat-value" id="headerSessions">0</span>
+                            <span class="header-stat-label">sessions today</span>
+                        </div>
+                        <div class="header-stat">
+                            <span class="header-stat-value" id="headerTasks">0</span>
+                            <span class="header-stat-label">active tasks</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" id="syncBtn" onclick="app.sync()">
+                        <span class="sync-icon">⟳</span> Sync
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content" id="content">
+                <!-- Dashboard View -->
+                <div class="view active" id="dashboardView">
+                    <!-- Stats Row -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">📋</div>
+                            <div class="stat-content">
+                                <div class="stat-label">Active Tasks</div>
+                                <div class="stat-value" id="activeTasksCount">0</div>
+                            </div>
+                            <div class="sparkline" id="taskSparkline"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🤖</div>
+                            <div class="stat-content">
+                                <div class="stat-label">Sessions Today</div>
+                                <div class="stat-value" id="sessionsToday">0</div>
+                            </div>
+                            <div class="sparkline" id="sessionSparkline"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📅</div>
+                            <div class="stat-content">
+                                <div class="stat-label">Events Today</div>
+                                <div class="stat-value" id="eventsToday">0</div>
+                            </div>
+                            <div class="stat-trend" id="nextEvent">—</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">💻</div>
+                            <div class="stat-content">
+                                <div class="stat-label">Git Commits</div>
+                                <div class="stat-value" id="gitCommits">0</div>
+                            </div>
+                            <div class="stat-trend">this week</div>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Panel -->
+                    <div class="panel full-width calendar-panel">
+                        <div class="panel-header">
+                            <h3>📅 Upcoming Events</h3>
+                            <div class="panel-actions">
+                                <button class="btn-tab active" data-cal-view="week">Week</button>
+                                <button class="btn-tab" data-cal-view="day">Today</button>
+                            </div>
+                        </div>
+                        <div class="panel-content calendar-grid" id="calendarEvents">
+                            <!-- Populated by JS -->
+                        </div>
+                        <div class="panel-footer">
+                            <span class="panel-subtitle" id="lastRefresh">Loading...</span>
+                        </div>
+                    </div>
+
+                    <!-- Two Column Layout -->
+                    <div class="dashboard-grid">
+                        <!-- Current Work -->
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h3>🎯 Current Tasks</h3>
+                                <button class="btn-icon" onclick="app.switchView('tasks')">→</button>
+                            </div>
+                            <div class="panel-content task-list-compact" id="currentWorkList">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h3>⚡ Recent Activity</h3>
+                                <button class="btn-icon" onclick="app.switchView('activity')">→</button>
+                            </div>
+                            <div class="panel-content activity-list-compact" id="activityList">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model Usage Chart -->
+                    <div class="panel full-width">
+                        <div class="panel-header">
+                            <h3>🤖 Model Sessions (7 Days)</h3>
+                            <div class="panel-actions">
+                                <button class="btn-tab active" data-range="7d">7D</button>
+                                <button class="btn-tab" data-range="30d">30D</button>
+                            </div>
+                        </div>
+                        <div class="panel-content chart-wrapper">
+                            <canvas id="sessionsChart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar View -->
+                <div class="view" id="calendarView">
+                    <div class="view-controls">
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-cal-filter="all">All Events</button>
+                            <button class="filter-btn" data-cal-filter="today">Today</button>
+                            <button class="filter-btn" data-cal-filter="week">This Week</button>
+                        </div>
+                    </div>
+                    <div class="calendar-full" id="calendarFull">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Tasks View -->
+                <div class="view" id="tasksView">
+                    <div class="view-controls">
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="active">Active</button>
+                            <button class="filter-btn" data-filter="completed">Completed</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="app.openAddModal('task')">+ Add Task</button>
+                    </div>
+                    <div class="tasks-list" id="tasksList">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Spend View -->
+                <div class="view" id="spendView">
+                    <div class="spend-overview">
+                        <div class="spend-card large">
+                            <div class="spend-header">
+                                <h3>Model Usage Overview</h3>
+                                <span class="spend-period">Last 7 Days</span>
+                            </div>
+                            <div class="spend-value" id="totalSessions">0 sessions</div>
+                        </div>
+                    </div>
+                    <div class="spend-details">
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h3>Sessions by Model</h3>
+                            </div>
+                            <div class="panel-content chart-wrapper">
+                                <canvas id="modelPieChart" height="250"></canvas>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h3>Daily Sessions</h3>
+                            </div>
+                            <div class="panel-content chart-wrapper">
+                                <canvas id="dailySessionsChart" height="250"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel full-width">
+                        <div class="panel-header">
+                            <h3>Model Breakdown</h3>
+                        </div>
+                        <div class="panel-content">
+                            <div class="model-bars" id="modelBars">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity View -->
+                <div class="view" id="activityView">
+                    <div class="view-controls">
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-activity-filter="all">All</button>
+                            <button class="filter-btn" data-activity-filter="git">Git</button>
+                            <button class="filter-btn" data-activity-filter="tasks">Tasks</button>
+                        </div>
+                    </div>
+                    <div class="activity-timeline" id="activityTimeline">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New</h3>
+                <button class="modal-close" id="modalClose" onclick="app.closeModal()">×</button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

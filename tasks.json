@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Build Mission Control dashboard",
+      "description": "Create PM app for tracking Eve's work and model spend",
+      "priority": "high",
+      "category": "development",
+      "dueDate": "2026-02-05",
+      "createdAt": "2026-02-05T17:00:00Z",
+      "completed": true,
+      "completedAt": "2026-02-05T19:06:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Upgrade dashboard with real data",
+      "description": "Add real model spend tracking, git activity, proper charts",
+      "priority": "high",
+      "category": "development",
+      "dueDate": "2026-02-06",
+      "createdAt": "2026-02-05T23:50:00Z",
+      "completed": false
+    }
+  ],
+  "lastUpdated": "2026-02-05T23:50:00Z"
+}

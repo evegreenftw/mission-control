@@ -1,0 +1,429 @@
+{
+  "refreshedAt": "2026-02-06T16:50:45Z",
+  "today": "2026-02-06",
+  "calendar": {
+  "events": [
+    {
+      "created": "2026-01-26T17:12:01.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-06T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539282723131294\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=N3VpbGRsY2tqNGtiN2tudmF1ZTlhZ3UwMTdfMjAyNjAyMDZUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "7uildlckj4kb7knvaue9agu017@google.com",
+      "id": "7uildlckj4kb7knvaue9agu017_20260206T140000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-06T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "7uildlckj4kb7knvaue9agu017",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-06T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Morning Routine",
+      "updated": "2026-01-28T23:02:41.565Z"
+    },
+    {
+      "created": "2026-01-26T17:12:14.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-06T10:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539597212926238\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MWg5bmRjdW91ZHBsZmh0aTM2bDFlbmJyMHFfMjAyNjAyMDZUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "1h9ndcuoudplfhti36l1enbr0q_R20260206T143000@google.com",
+      "id": "1h9ndcuoudplfhti36l1enbr0q_20260206T143000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-06T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "1h9ndcuoudplfhti36l1enbr0q_R20260206T143000",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-06T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Deep Learning",
+      "updated": "2026-01-30T18:43:26.463Z"
+    },
+    {
+      "created": "2026-02-06T06:39:42.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-06T09:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3540719965329918\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=Zm1jNjk1NTU4Mmk4bnJtbWU2b3F1MGJiMm8gdHlsZXJkaWFsMTgxOEBt",
+      "iCalUID": "fmc6955582i8nrmme6oqu0bb2o@google.com",
+      "id": "fmc6955582i8nrmme6oqu0bb2o",
+      "kind": "calendar#event",
+      "location": "Cottonwood Heights Cafe, 7146 S Highland Dr, Cottonwood Heights, UT 84121, USA",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-06T08:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Coffee Date",
+      "updated": "2026-02-06T06:39:42.664Z"
+    },
+    {
+      "created": "2024-12-03T19:57:23.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "description": "Personal planning for weekly, medium-term, and long term goals.",
+      "end": {
+        "dateTime": "2026-02-08T12:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539596444033598\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=Nmc5dHU4cGVhOXBlOGhpMG4yZ2QyY3NsNmNfMjAyNjAyMDhUMTcwMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "6g9tu8pea9pe8hi0n2gd2csl6c@google.com",
+      "id": "6g9tu8pea9pe8hi0n2gd2csl6c_20260208T170000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-08T10:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "6g9tu8pea9pe8hi0n2gd2csl6c",
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-08T10:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Weekly Planning",
+      "updated": "2026-01-30T18:37:02.016Z"
+    },
+    {
+      "created": "2026-01-30T18:42:18.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-09T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539597076594974\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MHZxb2ZxNGV0OWVqaThvdTNvYW85YjZtb25fMjAyNjAyMDlUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "0vqofq4et9eji8ou3oao9b6mon@google.com",
+      "id": "0vqofq4et9eji8ou3oao9b6mon_20260209T140000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-09T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "0vqofq4et9eji8ou3oao9b6mon",
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-09T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Morning Routine",
+      "updated": "2026-01-30T18:42:18.297Z"
+    },
+    {
+      "created": "2026-01-30T18:43:14.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-09T10:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539597189405822\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MmNrMGlpZm1tdmExOW9zNXNpMTdvY21haGZfMjAyNjAyMDlUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "2ck0iifmmva19os5si17ocmahf@google.com",
+      "id": "2ck0iifmmva19os5si17ocmahf_20260209T143000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-09T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "2ck0iifmmva19os5si17ocmahf",
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-09T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Deep Learning ",
+      "updated": "2026-01-30T18:43:14.702Z"
+    },
+    {
+      "created": "2026-01-26T17:08:30.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-10T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539282526579294\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NG5wNjlycXJ2MTQxcWw4dWU3cXRocnVxcGxfMjAyNjAyMTBUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "4np69rqrv141ql8ue7qthruqpl@google.com",
+      "id": "4np69rqrv141ql8ue7qthruqpl_20260210T140000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-10T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "4np69rqrv141ql8ue7qthruqpl",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-10T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Morning Routine",
+      "updated": "2026-01-28T23:01:03.289Z"
+    },
+    {
+      "created": "2026-01-26T17:08:47.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-10T08:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539597249610142\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MzNmNmFjdjZta25pcTU1cWg4czI4OXBic3JfMjAyNjAyMTBUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "33f6acv6mkniq55qh8s289pbsr_R20260203T143000@google.com",
+      "id": "33f6acv6mkniq55qh8s289pbsr_20260210T143000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-10T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "33f6acv6mkniq55qh8s289pbsr_R20260203T143000",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-10T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Deep Learning",
+      "updated": "2026-01-30T18:43:44.805Z"
+    },
+    {
+      "created": "2026-01-26T17:11:46.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-11T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539282576690590\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NWZrZjkzazgzdGYzZ3M0bHZrZDA1MDUya2dfMjAyNjAyMTFUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "5fkf93k83tf3gs4lvkd05052kg@google.com",
+      "id": "5fkf93k83tf3gs4lvkd05052kg_20260211T140000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-11T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "5fkf93k83tf3gs4lvkd05052kg",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-11T07:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Morning Routine",
+      "updated": "2026-01-28T23:01:28.345Z"
+    },
+    {
+      "created": "2026-01-26T17:11:12.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-11T10:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539597234974622\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NjA2bmQ0ZWZsajYxMTVtcnVibjJ0N2hmN3JfMjAyNjAyMTFUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "606nd4eflj6115mrubn2t7hf7r_R20260204T143000@google.com",
+      "id": "606nd4eflj6115mrubn2t7hf7r_20260211T143000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-11T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "606nd4eflj6115mrubn2t7hf7r_R20260204T143000",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-11T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Deep Learning",
+      "updated": "2026-01-30T18:43:37.487Z"
+    }
+  ],
+  "nextPageToken": "EkoKSBJGCgYI6KSyzAYSPBI6ChwKGjYwNm5kNGVmbGo2MTE1bXJ1Ym4ydDdoZjdyEggKBgjor43MBhoQMjAyNjAyMDRUMTQzMDAwWsA-AQ=="
+},
+  "gitActivity": [
+  {
+    "hash": "100b14c",
+    "message": "Add content drafts for review: 3 articles + LinkedIn posts",
+    "author": "Eve Green",
+    "date": "2026-02-06T00:29:03-07:00"
+  },
+  {
+    "hash": "eb29efb",
+    "message": "Upgrade Mission Control to v2.0: real data, Chart.js, better UX",
+    "author": "Eve Green",
+    "date": "2026-02-06T00:00:33-07:00"
+  },
+  {
+    "hash": "0c8b39e",
+    "message": "Add Mission Control with live calendar sync and 6-hour cron refresh",
+    "author": "Eve Green",
+    "date": "2026-02-05T23:53:09-07:00"
+  },
+  {
+    "hash": "e1e1e68",
+    "message": "Document the sacred trust - sandbox disabled, full host access granted",
+    "author": "Eve Green",
+    "date": "2026-02-05T23:41:07-07:00"
+  }
+],
+  "modelUsage": {
+  "byModel": [],
+  "dailyCounts": []
+},
+  "tasks": {
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Build Mission Control dashboard",
+      "description": "Create PM app for tracking Eve's work and model spend",
+      "priority": "high",
+      "category": "development",
+      "dueDate": "2026-02-05",
+      "createdAt": "2026-02-05T17:00:00Z",
+      "completed": true,
+      "completedAt": "2026-02-05T19:06:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Upgrade dashboard with real data",
+      "description": "Add real model spend tracking, git activity, proper charts",
+      "priority": "high",
+      "category": "development",
+      "dueDate": "2026-02-06",
+      "createdAt": "2026-02-05T23:50:00Z",
+      "completed": false
+    }
+  ],
+  "lastUpdated": "2026-02-05T23:50:00Z"
+},
+  "weather": null
+}
