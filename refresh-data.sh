@@ -81,7 +81,10 @@ EOF
 fi
 
 # 6. Build the JSON data file
-echo "📦 Building data file..."
+echo "💬 Extracting conversations...
+./extract-conversations.sh 2>/dev/null || echo "⚠️ Could not extract conversations"
+
+📦 Building data file..."
 cat > "$TEMP_FILE" << EOF
 {
   "refreshedAt": "$REFRESH_TIME",
