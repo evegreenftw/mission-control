@@ -1438,3 +1438,83 @@ body {
         flex-wrap: wrap;
     }
 }
+
+/* ========================================
+   Password Protection Overlay
+   ======================================== */
+.password-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.password-box {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    border-radius: 16px;
+    padding: 48px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.password-box h2 {
+    font-size: 24px;
+    margin: 0 0 12px 0;
+    color: var(--text-primary);
+}
+
+.password-box p {
+    color: var(--text-tertiary);
+    margin: 0 0 24px 0;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-family: var(--font-primary);
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.password-box input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+.password-box button {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.password-box button:hover {
+    background: var(--accent-primary-hover);
+}
+
+.password-error {
+    color: #ff4757;
+    font-size: 14px;
+    margin-top: 12px;
+    min-height: 20px;
+}

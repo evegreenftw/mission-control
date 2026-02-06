@@ -11,7 +11,18 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
-    <div class="app">
+    <!-- Password Protection Overlay -->
+    <div id="password-overlay" class="password-overlay">
+        <div class="password-box">
+            <h2>🔒 Mission Control Access</h2>
+            <p>Enter password to continue</p>
+            <input type="password" id="password-input" placeholder="Password" autocomplete="off">
+            <button onclick="checkPassword()">Unlock</button>
+            <p id="password-error" class="password-error"></p>
+        </div>
+    </div>
+
+    <div class="app" style="display: none;" id="main-app">
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -288,6 +299,50 @@
 
     <!-- Toast Notifications -->
     <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // Password Protection
+        // To change password, update the hash below or set PASSWORD_HASH env var
+        const PASSWORD_HASH = 'EVE2026'; // Change this to your desired password
+
+        function checkPassword() {
+            const input = document.getElementById('password-input');
+            const error = document.getElementById('password-error');
+            const password = input.value;
+
+            if (password === PASSWORD_HASH) {
+                // Correct password
+                sessionStorage.setItem('mc_auth', 'true');
+                document.getElementById('password-overlay').style.display = 'none';
+                document.getElementById('main-app').style.display = 'flex';
+                error.textContent = '';
+            } else {
+                // Wrong password
+                error.textContent = 'Incorrect password';
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        // Check if already authenticated in this session
+        window.addEventListener('DOMContentLoaded', function() {
+            const input = document.getElementById('password-input');
+            
+            if (sessionStorage.getItem('mc_auth') === 'true') {
+                document.getElementById('password-overlay').style.display = 'none';
+                document.getElementById('main-app').style.display = 'flex';
+            } else {
+                input.focus();
+            }
+
+            // Allow Enter key to submit
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkPassword();
+                }
+            });
+        });
+    </script>
 
     <script src="data.js"></script>
     <script src="app.js"></script>
