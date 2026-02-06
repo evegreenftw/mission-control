@@ -28,9 +28,9 @@ if [ -d "$HOME/.openclaw/workspace/.git" ]; then
   cd - > /dev/null
 fi
 
-# 3. Parse OpenClaw logs for model usage (last 7 days)
+# 3. Parse OpenClaw logs for model usage and cost (last 7 days)
 echo "🤖 Parsing model usage from logs..."
-MODEL_USAGE='{"byModel":[],"dailyCounts":[]}'
+MODEL_USAGE='{"byModel":[],"dailyCounts":[],"totalCost":0}'
 LOG_DIR="/tmp/openclaw"
 if [ -d "$LOG_DIR" ]; then
   # Count model usage by grepping for model names
@@ -38,10 +38,26 @@ if [ -d "$LOG_DIR" ]; then
   SONNET_COUNT=$(grep -oh 'claude-sonnet' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
   HAIKU_COUNT=$(grep -oh 'claude-haiku' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
   
+  # Estimate tokens per API call (conservative averages based on typical usage)
+  # Input/Output split roughly 60/40
+  AVG_INPUT_TOKENS=5000
+  AVG_OUTPUT_TOKENS=1500
+  
+  # Calculate costs (price per million tokens)
+  # Opus: $15 input, $75 output
+  # Sonnet: $3 input, $15 output  
+  # Haiku: $0.80 input, $4 output
+  
+  OPUS_COST=$(echo "scale=2; ($OPUS_COUNT * $AVG_INPUT_TOKENS * 15 / 1000000) + ($OPUS_COUNT * $AVG_OUTPUT_TOKENS * 75 / 1000000)" | bc)
+  SONNET_COST=$(echo "scale=2; ($SONNET_COUNT * $AVG_INPUT_TOKENS * 3 / 1000000) + ($SONNET_COUNT * $AVG_OUTPUT_TOKENS * 15 / 1000000)" | bc)
+  HAIKU_COST=$(echo "scale=2; ($HAIKU_COUNT * $AVG_INPUT_TOKENS * 0.80 / 1000000) + ($HAIKU_COUNT * $AVG_OUTPUT_TOKENS * 4 / 1000000)" | bc)
+  
+  TOTAL_COST=$(echo "scale=2; $OPUS_COST + $SONNET_COST + $HAIKU_COST" | bc)
+  
   BY_MODEL='['
-  [ "$OPUS_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"opus\",\"count\":$OPUS_COUNT},"
-  [ "$SONNET_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"sonnet\",\"count\":$SONNET_COUNT},"
-  [ "$HAIKU_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"haiku\",\"count\":$HAIKU_COUNT},"
+  [ "$OPUS_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"opus\",\"count\":$OPUS_COUNT,\"cost\":$OPUS_COST},"
+  [ "$SONNET_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"sonnet\",\"count\":$SONNET_COUNT,\"cost\":$SONNET_COST},"
+  [ "$HAIKU_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"haiku\",\"count\":$HAIKU_COUNT,\"cost\":$HAIKU_COST},"
   BY_MODEL=$(echo "$BY_MODEL" | sed 's/,$//')
   BY_MODEL="${BY_MODEL}]"
   
@@ -62,7 +78,8 @@ if [ -d "$LOG_DIR" ]; then
   MODEL_USAGE=$(cat <<EOF
 {
   "byModel": $BY_MODEL,
-  "dailyCounts": $DAILY_COUNTS
+  "dailyCounts": $DAILY_COUNTS,
+  "totalCost": $TOTAL_COST
 }
 EOF
 )

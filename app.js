@@ -606,10 +606,11 @@ class MissionControl {
         const modelUsage = this.externalData?.modelUsage || {};
         const byModel = modelUsage.byModel || [];
         const dailyCounts = modelUsage.dailyCounts || [];
+        const totalCost = modelUsage.totalCost || 0;
         
-        // Total sessions
+        // Total sessions and cost
         const total = dailyCounts.reduce((sum, d) => sum + d.sessions, 0);
-        document.getElementById('totalSessions').textContent = `${total} sessions`;
+        document.getElementById('totalSessions').textContent = `${total} sessions · $${totalCost.toFixed(2)} spent`;
         
         // Render model pie chart
         this.renderModelPieChart(byModel);
@@ -713,21 +714,22 @@ class MissionControl {
             return;
         }
         
-        const maxCount = Math.max(...byModel.map(m => m.count), 1);
+        const maxCost = Math.max(...byModel.map(m => m.cost || 0), 1);
         const colors = {
-            'claude-opus-4-5': '#8b5cf6',
-            'claude-sonnet-4-5': '#3b82f6',
-            'claude-haiku-4-5': '#22c55e'
+            'opus': '#8b5cf6',
+            'sonnet': '#3b82f6',
+            'haiku': '#22c55e'
         };
         
         container.innerHTML = byModel.map(model => {
             const color = colors[model.model] || '#666';
-            const width = (model.count / maxCount) * 100;
+            const width = ((model.cost || 0) / maxCost) * 100;
+            const cost = model.cost ? `$${model.cost.toFixed(2)}` : '$0.00';
             return `
                 <div class="model-bar-item">
                     <div class="model-bar-header">
                         <span class="model-bar-name">${model.model}</span>
-                        <span class="model-bar-value">${model.count} sessions</span>
+                        <span class="model-bar-value">${model.count} calls · ${cost}</span>
                     </div>
                     <div class="model-bar-track">
                         <div class="model-bar-fill" style="width: ${width}%; background: ${color}"></div>

@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-06T18:08:57Z",
+  "refreshedAt": "2026-02-06T18:17:10Z",
   "today": "2026-02-06",
   "calendar": {
   "events": [
@@ -396,7 +396,7 @@
   }
 ],
   "modelUsage": {
-  "byModel": [{"model":"opus","count":159},{"model":"sonnet","count":46},{"model":"haiku","count":27}],
+  "byModel": [{"model":"opus","count":159,"cost":29.80},{"model":"sonnet","count":47,"cost":1.75},{"model":"haiku","count":28,"cost":.27}],
   "dailyCounts": [
   {
     "date": "2026-02-05",
@@ -410,7 +410,8 @@
     "date": "2026-02-06",
     "sessions": 1
   }
-]
+],
+  "totalCost": 31.82
 },
   "tasks": {
   "tasks": [
