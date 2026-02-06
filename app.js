@@ -128,7 +128,8 @@ class MissionControl {
             calendar: 'Calendar',
             tasks: 'Tasks',
             spend: 'Model Usage',
-            activity: 'Activity'
+            activity: 'Activity',
+            conversations: 'Conversations'
         };
         document.getElementById('pageTitle').textContent = titles[view];
 
@@ -140,9 +141,10 @@ class MissionControl {
         switch (view) {
             case 'dashboard': this.renderDashboard(); break;
             case 'calendar': this.renderCalendarFull(); break;
-            case 'tasks': this.renderTasks(); break;
+            case 'tasks': renderKanbanView(); break;
             case 'spend': this.renderSpend(); break;
             case 'activity': this.renderActivityView(); break;
+            case 'conversations': renderConversationsView(); break;
         }
     }
 
