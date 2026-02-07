@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-07T16:34:58Z",
+  "refreshedAt": "2026-02-07T17:17:20Z",
   "today": "2026-02-07",
   "calendar": {
   "events": [
@@ -71,6 +71,38 @@
       "status": "confirmed",
       "summary": "Weekly Planning",
       "updated": "2026-01-30T18:37:02.016Z"
+    },
+    {
+      "created": "2026-02-07T16:36:17.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-08T20:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3540964436846238\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NGV0cmFnamk4bDFyZnFqbmx2dDBia3NsNmwgdHlsZXJkaWFsMTgxOEBt",
+      "iCalUID": "4etragji8l1rfqjnlvt0bksl6l@google.com",
+      "id": "4etragji8l1rfqjnlvt0bksl6l",
+      "kind": "calendar#event",
+      "location": "1975 N 4040 W, Lehi, UT 84043, USA",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-08T16:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Super Bowl Party",
+      "updated": "2026-02-07T16:36:58.423Z"
     },
     {
       "created": "2026-01-30T18:42:18.000Z",
@@ -370,46 +402,9 @@
       "status": "confirmed",
       "summary": "498 Capstone Huddle",
       "updated": "2026-02-06T20:28:06.321Z"
-    },
-    {
-      "created": "2026-01-26T17:11:34.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3539282691051998\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=NHA1cTlrN2NybHEwYTc3aWdxOW1mc3Y5MzZfMjAyNjAyMTJUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "4p5q9k7crlq0a77igq9mfsv936@google.com",
-      "id": "4p5q9k7crlq0a77igq9mfsv936_20260212T140000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-12T07:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "4p5q9k7crlq0a77igq9mfsv936",
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-12T07:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Morning Routine",
-      "updated": "2026-01-28T23:02:25.525Z"
     }
   ],
-  "nextPageToken": "EiwKKhIoCgYI4Lm3zAYSHgocCho0cDVxOWs3Y3JscTBhNzdpZ3E5bWZzdjkzNsA-AQ=="
+  "nextPageToken": "EiwKKhIoCgYIkMy0zAYSHgocChozcXRwaTg5ZzBlbXNsOXE0OG1qcDg2a2k1bMA-AQ=="
 },
   "gitActivity": [
   {
@@ -438,7 +433,7 @@
   }
 ],
   "modelUsage": {
-  "byModel": [{"model":"opus","count":122,"cost":22.87},{"model":"sonnet","count":172,"cost":6.45},{"model":"haiku","count":49,"cost":.48},{"model":"minimax","count":39,"cost":.06},{"model":"deepseek","count":34,"cost":.09},{"model":"kimi","count":47,"cost":.09},{"model":"gemini","count":4,"cost":0.00}],
+  "byModel": [{"model":"opus","count":122,"cost":22.87},{"model":"sonnet","count":178,"cost":6.67},{"model":"haiku","count":49,"cost":.48},{"model":"minimax","count":41,"cost":.07},{"model":"deepseek","count":34,"cost":.09},{"model":"kimi","count":47,"cost":.09},{"model":"gemini","count":4,"cost":0.00}],
   "dailyCounts": [
   {
     "date": "2026-02-05",
@@ -453,7 +448,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 30.04
+  "totalCost": 30.27
 },
   "tasks": {
   "tasks": [
