@@ -1,8 +1,40 @@
 {
-  "refreshedAt": "2026-02-07T16:19:22Z",
+  "refreshedAt": "2026-02-07T16:34:58Z",
   "today": "2026-02-07",
   "calendar": {
   "events": [
+    {
+      "created": "2026-02-07T16:33:01.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-07T21:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3540963963832574\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NnBkdHRvbXNya3JrcGEwcnQ5NGsyNGIxM2QgdHlsZXJkaWFsMTgxOEBt",
+      "iCalUID": "6pdttomsrkrkpa0rt94k24b13d@google.com",
+      "id": "6pdttomsrkrkpa0rt94k24b13d",
+      "kind": "calendar#event",
+      "location": "366 E 200 N, Heber City, UT 84032, USA",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-07T18:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Dinner Party",
+      "updated": "2026-02-07T16:33:01.916Z"
+    },
     {
       "created": "2024-12-03T19:57:23.000Z",
       "creator": {
@@ -375,46 +407,9 @@
       "status": "confirmed",
       "summary": "Morning Routine",
       "updated": "2026-01-28T23:02:25.525Z"
-    },
-    {
-      "created": "2026-01-26T17:13:49.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T08:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3539282440971134\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=MWFrdWMwZjRjOGlwdG1tZ2hkZHRrODRjZXZfMjAyNjAyMTJUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "1akuc0f4c8iptmmghddtk84cev@google.com",
-      "id": "1akuc0f4c8iptmmghddtk84cev_20260212T143000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-12T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "1akuc0f4c8iptmmghddtk84cev",
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-12T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Deep Learning",
-      "updated": "2026-01-28T23:00:20.485Z"
     }
   ],
-  "nextPageToken": "EiwKKhIoCgYI6Me3zAYSHgocChoxYWt1YzBmNGM4aXB0bW1naGRkdGs4NGNldsA-AQ=="
+  "nextPageToken": "EiwKKhIoCgYI4Lm3zAYSHgocCho0cDVxOWs3Y3JscTBhNzdpZ3E5bWZzdjkzNsA-AQ=="
 },
   "gitActivity": [
   {
@@ -443,7 +438,7 @@
   }
 ],
   "modelUsage": {
-  "byModel": [{"model":"opus","count":122,"cost":22.87},{"model":"sonnet","count":171,"cost":6.40},{"model":"haiku","count":49,"cost":.48},{"model":"minimax","count":39,"cost":.06},{"model":"deepseek","count":34,"cost":.09},{"model":"kimi","count":47,"cost":.09},{"model":"gemini","count":4,"cost":0.00}],
+  "byModel": [{"model":"opus","count":122,"cost":22.87},{"model":"sonnet","count":172,"cost":6.45},{"model":"haiku","count":49,"cost":.48},{"model":"minimax","count":39,"cost":.06},{"model":"deepseek","count":34,"cost":.09},{"model":"kimi","count":47,"cost":.09},{"model":"gemini","count":4,"cost":0.00}],
   "dailyCounts": [
   {
     "date": "2026-02-05",
@@ -458,7 +453,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 29.99
+  "totalCost": 30.04
 },
   "tasks": {
   "tasks": [
