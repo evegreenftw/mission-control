@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-09T08:17:22Z",
+  "refreshedAt": "2026-02-09T08:25:47Z",
   "today": "2026-02-09",
   "calendar": {
   "events": [
@@ -443,7 +443,7 @@
   }
 ],
   "modelUsage": {
-  "byModel": [{"model":"opus","count":8,"cost":1.50},{"model":"sonnet","count":213,"cost":7.98},{"model":"haiku","count":54,"cost":.53},{"model":"minimax","count":40,"cost":.07},{"model":"deepseek","count":26,"cost":.07},{"model":"kimi","count":19,"cost":.02},{"model":"gemini","count":1,"cost":0.00}],
+  "byModel": [{"model":"opus","count":8,"cost":1.50},{"model":"sonnet","count":213,"cost":7.98},{"model":"haiku","count":55,"cost":.55},{"model":"minimax","count":40,"cost":.07},{"model":"deepseek","count":26,"cost":.07},{"model":"kimi","count":19,"cost":.02},{"model":"gemini","count":1,"cost":0.00}],
   "dailyCounts": [
   {
     "date": "2026-02-06",
@@ -454,11 +454,15 @@
     "sessions": 1
   },
   {
+    "date": "2026-02-09",
+    "sessions": 1
+  },
+  {
     "date": "2026-02-08",
     "sessions": 1
   }
 ],
-  "totalCost": 10.17
+  "totalCost": 10.19
 },
   "tasks": {
   "tasks": [
