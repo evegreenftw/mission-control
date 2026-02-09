@@ -1,77 +1,8 @@
 {
-  "refreshedAt": "2026-02-09T06:25:27Z",
-  "today": "2026-02-08",
+  "refreshedAt": "2026-02-09T07:17:21Z",
+  "today": "2026-02-09",
   "calendar": {
   "events": [
-    {
-      "created": "2024-12-03T19:57:23.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "description": "Personal planning for weekly, medium-term, and long term goals.",
-      "end": {
-        "dateTime": "2026-02-08T12:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3539596444033598\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=Nmc5dHU4cGVhOXBlOGhpMG4yZ2QyY3NsNmNfMjAyNjAyMDhUMTcwMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "6g9tu8pea9pe8hi0n2gd2csl6c@google.com",
-      "id": "6g9tu8pea9pe8hi0n2gd2csl6c_20260208T170000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-08T10:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "6g9tu8pea9pe8hi0n2gd2csl6c",
-      "reminders": {
-        "useDefault": true
-      },
-      "start": {
-        "dateTime": "2026-02-08T10:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Weekly Planning",
-      "updated": "2026-01-30T18:37:02.016Z"
-    },
-    {
-      "created": "2026-02-07T16:36:17.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-08T20:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3540964436846238\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=NGV0cmFnamk4bDFyZnFqbmx2dDBia3NsNmwgdHlsZXJkaWFsMTgxOEBt",
-      "iCalUID": "4etragji8l1rfqjnlvt0bksl6l@google.com",
-      "id": "4etragji8l1rfqjnlvt0bksl6l",
-      "kind": "calendar#event",
-      "location": "1975 N 4040 W, Lehi, UT 84043, USA",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "reminders": {
-        "useDefault": true
-      },
-      "start": {
-        "dateTime": "2026-02-08T16:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Super Bowl Party",
-      "updated": "2026-02-07T16:36:58.423Z"
-    },
     {
       "created": "2026-01-30T18:42:18.000Z",
       "creator": {
@@ -407,9 +338,83 @@
       "status": "confirmed",
       "summary": "Morning Routine",
       "updated": "2026-01-28T23:02:25.525Z"
+    },
+    {
+      "created": "2026-01-26T17:13:49.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-12T08:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3539282440971134\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MWFrdWMwZjRjOGlwdG1tZ2hkZHRrODRjZXZfMjAyNjAyMTJUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "1akuc0f4c8iptmmghddtk84cev@google.com",
+      "id": "1akuc0f4c8iptmmghddtk84cev_20260212T143000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-12T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "1akuc0f4c8iptmmghddtk84cev",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-12T07:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Deep Learning",
+      "updated": "2026-01-28T23:00:20.485Z"
+    },
+    {
+      "created": "2025-12-04T19:00:09.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-12T10:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3540145851494910\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=ZjZqNGliY2M3aW82OGlobDFsdDVlOHQ5ODhfMjAyNjAyMTJUMTYwMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "f6j4ibcc7io68ihl1lt5e8t988@google.com",
+      "id": "f6j4ibcc7io68ihl1lt5e8t988_20260212T160000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-12T09:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "f6j4ibcc7io68ihl1lt5e8t988",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-02-12T09:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Lori Lund EMDR Therapy",
+      "updated": "2026-02-02T22:55:25.747Z"
     }
   ],
-  "nextPageToken": "EiwKKhIoCgYI4Lm3zAYSHgocCho0cDVxOWs3Y3JscTBhNzdpZ3E5bWZzdjkzNsA-AQ=="
+  "nextPageToken": "EiwKKhIoCgYIgPK3zAYSHgocChpmNmo0aWJjYzdpbzY4aWhsMWx0NWU4dDk4OMA-AQ=="
 },
   "gitActivity": [
   {
@@ -438,7 +443,7 @@
   }
 ],
   "modelUsage": {
-  "byModel": [{"model":"opus","count":8,"cost":1.50},{"model":"sonnet","count":209,"cost":7.83},{"model":"haiku","count":53,"cost":.52},{"model":"minimax","count":40,"cost":.07},{"model":"deepseek","count":26,"cost":.07},{"model":"kimi","count":19,"cost":.02},{"model":"gemini","count":1,"cost":0.00}],
+  "byModel": [{"model":"opus","count":8,"cost":1.50},{"model":"sonnet","count":210,"cost":7.87},{"model":"haiku","count":53,"cost":.52},{"model":"minimax","count":40,"cost":.07},{"model":"deepseek","count":26,"cost":.07},{"model":"kimi","count":19,"cost":.02},{"model":"gemini","count":1,"cost":0.00}],
   "dailyCounts": [
   {
     "date": "2026-02-06",
@@ -453,7 +458,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 10.01
+  "totalCost": 10.05
 },
   "tasks": {
   "tasks": [
