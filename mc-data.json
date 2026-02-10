@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-10T06:51:47Z",
+  "refreshedAt": "2026-02-10T06:54:23Z",
   "today": "2026-02-09",
   "calendar": {
   "events": [
@@ -488,37 +488,37 @@
   "byModel": [
   {
     "model": "opus",
-    "count": 80,
-    "cost": 15
+    "count": 88,
+    "cost": 16.5
   },
   {
     "model": "sonnet",
-    "count": 2546,
-    "cost": 95.46249999999999
+    "count": 2816,
+    "cost": 105.58749999999999
   },
   {
     "model": "haiku",
-    "count": 746,
-    "cost": 7.449999999999999
+    "count": 823,
+    "cost": 8.219999999999999
   },
   {
     "model": "minimax",
-    "count": 319,
-    "cost": 0.6136
+    "count": 350,
+    "cost": 0.674
   },
   {
     "model": "deepseek",
-    "count": 197,
-    "cost": 0.5821
+    "count": 216,
+    "cost": 0.6389999999999999
   },
   {
     "model": "kimi",
-    "count": 145,
-    "cost": 0.2657
+    "count": 159,
+    "cost": 0.293
   },
   {
     "model": "gemini",
-    "count": 10,
+    "count": 11,
     "cost": 0
   }
 ],
@@ -540,7 +540,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 119.37389999999999
+  "totalCost": 131.91350000000003
 },
   "tasks": {
   "tasks": [
@@ -655,9 +655,321 @@
       "createdAt": "2026-02-10T05:42:15Z",
       "completed": true,
       "completedAt": "2026-02-10T05:43:46Z"
+    },
+    {
+      "id": "10",
+      "title": "Deep Learning (1.5 hrs minimum)",
+      "description": "Daily deep learning study",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "11",
+      "title": "Exercise",
+      "description": "Daily exercise routine",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "health",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "12",
+      "title": "Journal",
+      "description": "Daily journaling",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "13",
+      "title": "Do Assignment 1",
+      "description": "AI Agents course assignment",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "education",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "14",
+      "title": "Do Final Project Phase 1",
+      "description": "AI Agents final project",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "15",
+      "title": "Go through a product management exercise for Churn App",
+      "description": "Product management for Churn App",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "health",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "16",
+      "title": "Figure out UI/Design Inspiration for the Churn App (Vercel/Palantir?)",
+      "description": "Research UI design inspiration",
+      "assignedTo": "Eve",
+      "priority": "medium",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "17",
+      "title": "Code the first version of the front end with the 3 pages Tej and I talked about",
+      "description": "Build Churn App frontend",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "development",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "18",
+      "title": "Register for all the necessary data sources",
+      "description": "Socio Lead Intelligence data sources",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "19",
+      "title": "Go through product management exercise for spec design",
+      "description": "Socio Lead Intelligence product spec",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "health",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "20",
+      "title": "Figure out inspiration and structure",
+      "description": "Socio Lead Intelligence design structure",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "21",
+      "title": "Get API key/approval from Ben & Lance",
+      "description": "Socio Lead Intelligence API approval",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "22",
+      "title": "Build v1 of the app",
+      "description": "Socio Lead Intelligence v1 build",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "development",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "23",
+      "title": "Finish Portfolio Website Homepage (when I get pictures)?",
+      "description": "Complete homepage with photos",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "development",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "24",
+      "title": "Create professional blog section of my portfolio website (EVE)",
+      "description": "Build professional blog section",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "content",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "25",
+      "title": "Create Individual pages for Projects, About Me, and Writing (Split into personal substack and professional writing portions) on my Portfolio Website (EVE)",
+      "description": "Build portfolio pages",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "development",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "26",
+      "title": "Review and Publish Professional Blog Posts & Corresponding LinkedIn Posts",
+      "description": "Review and publish blog content",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "content",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "27",
+      "title": "Finish and Fix Housing Pulse, prepare LinkedIn and blog post",
+      "description": "Complete Housing Pulse project",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "content",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "28",
+      "title": "Finish and Fix Clustering-Sandbox, prepare LinkedIn and blog post",
+      "description": "Complete Clustering-Sandbox project",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "content",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "29",
+      "title": "Finish and Fix Social Impact Chatbot, prepare LinkedIn and blog post",
+      "description": "Complete Social Impact Chatbot project",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "content",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "30",
+      "title": "Start executing other projects on the list",
+      "description": "Execute additional portfolio projects",
+      "assignedTo": "Eve",
+      "priority": "low",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "31",
+      "title": "Create v1 of DialedIntelligence.com",
+      "description": "Build Dialed Intelligence website",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "32",
+      "title": "Setup Dialed Intelligence LinkedIn",
+      "description": "Create Dialed Intelligence LinkedIn presence",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "33",
+      "title": "Create SEO Strategy Skill/Document for Dialed Intelligence",
+      "description": "Develop SEO strategy",
+      "assignedTo": "Eve",
+      "priority": "medium",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "34",
+      "title": "Start publishing content on the blog portion of DialedIntelligence.com",
+      "description": "Begin Dialed Intelligence blog",
+      "assignedTo": "Eve",
+      "priority": "medium",
+      "category": "content",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
+    },
+    {
+      "id": "35",
+      "title": "Create Sales/Marketing Plan for Dialed Intelligence",
+      "description": "Develop sales and marketing strategy",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:53:47Z",
+      "completed": false
     }
   ],
-  "lastUpdated": "2026-02-10T05:43:46Z"
+  "lastUpdated": "2026-02-10T06:53:47Z"
 },
   "weather": null
 }
