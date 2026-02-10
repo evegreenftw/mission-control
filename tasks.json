@@ -98,7 +98,20 @@
       "createdAt": "2026-02-10T05:03:53Z",
       "completed": true,
       "completedAt": "2026-02-10T05:03:57Z"
+    },
+    {
+      "id": "9",
+      "title": "Build enhanced Books section for portfolio website",
+      "description": "Create Hall of Fame, Academic Reading, and Year tabs with book covers matching homepage style",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "development",
+      "status": "completed",
+      "dueDate": "2026-02-15",
+      "createdAt": "2026-02-10T05:42:15Z",
+      "completed": true,
+      "completedAt": "2026-02-10T05:43:46Z"
     }
   ],
-  "lastUpdated": "2026-02-10T05:03:57Z"
+  "lastUpdated": "2026-02-10T05:43:46Z"
 }
