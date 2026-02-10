@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-10T00:28:22Z",
+  "refreshedAt": "2026-02-10T01:22:30Z",
   "today": "2026-02-09",
   "calendar": {
   "events": [
@@ -74,6 +74,85 @@
       "status": "confirmed",
       "summary": "Deep Learning ",
       "updated": "2026-01-30T18:43:14.702Z"
+    },
+    {
+      "attendees": [
+        {
+          "email": "tylerdial1818@gmail.com",
+          "responseStatus": "needsAction",
+          "self": true
+        },
+        {
+          "email": "tylerdial2026@u.northwestern.edu",
+          "organizer": true,
+          "responseStatus": "accepted"
+        },
+        {
+          "email": "tejaswigorde@gmail.com",
+          "responseStatus": "needsAction"
+        },
+        {
+          "email": "tejaswigorde2025@u.northwestern.edu",
+          "responseStatus": "needsAction"
+        }
+      ],
+      "conferenceData": {
+        "conferenceId": "tdc-abbc-tqs",
+        "conferenceSolution": {
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png",
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet"
+        },
+        "entryPoints": [
+          {
+            "entryPointType": "video",
+            "label": "meet.google.com/tdc-abbc-tqs",
+            "uri": "https://meet.google.com/tdc-abbc-tqs"
+          },
+          {
+            "entryPointType": "phone",
+            "label": "+1 252-656-5423",
+            "pin": "792294731",
+            "regionCode": "US",
+            "uri": "tel:+1-252-656-5423"
+          }
+        ]
+      },
+      "created": "2026-02-10T00:30:52.000Z",
+      "creator": {
+        "email": "tylerdial2026@u.northwestern.edu"
+      },
+      "end": {
+        "dateTime": "2026-02-09T18:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3541366910345054\"",
+      "eventType": "default",
+      "hangoutLink": "https://meet.google.com/tdc-abbc-tqs",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NmFnMGQ5YnQ3MW9tdjhpbzJrc2psOTR1azZfMjAyNjAyMTBUMDAzMDAwWiB0eWxlcmRpYWwxODE4QG0",
+      "iCalUID": "6ag0d9bt71omv8io2ksjl94uk6@google.com",
+      "id": "6ag0d9bt71omv8io2ksjl94uk6_20260210T003000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial2026@u.northwestern.edu"
+      },
+      "originalStartTime": {
+        "dateTime": "2026-02-09T17:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "recurringEventId": "6ag0d9bt71omv8io2ksjl94uk6",
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-09T17:30:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "498 Capstone Huddle",
+      "updated": "2026-02-10T00:30:55.172Z"
     },
     {
       "created": "2026-01-26T17:08:30.000Z",
@@ -375,46 +454,9 @@
       "status": "confirmed",
       "summary": "Deep Learning",
       "updated": "2026-01-28T23:00:20.485Z"
-    },
-    {
-      "created": "2025-12-04T19:00:09.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T10:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3540145851494910\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=ZjZqNGliY2M3aW82OGlobDFsdDVlOHQ5ODhfMjAyNjAyMTJUMTYwMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "f6j4ibcc7io68ihl1lt5e8t988@google.com",
-      "id": "f6j4ibcc7io68ihl1lt5e8t988_20260212T160000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-12T09:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "f6j4ibcc7io68ihl1lt5e8t988",
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-12T09:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Lori Lund EMDR Therapy",
-      "updated": "2026-02-02T22:55:25.747Z"
     }
   ],
-  "nextPageToken": "EiwKKhIoCgYIgPK3zAYSHgocChpmNmo0aWJjYzdpbzY4aWhsMWx0NWU4dDk4OMA-AQ=="
+  "nextPageToken": "EiwKKhIoCgYI6Me3zAYSHgocChoxYWt1YzBmNGM4aXB0bW1naGRkdGs4NGNldsA-AQ=="
 },
   "gitActivity": [
   {
@@ -443,7 +485,7 @@
   }
 ],
   "modelUsage": {
-  "byModel": [{"model":"opus","count":8,"cost":1.50},{"model":"sonnet","count":244,"cost":9.15},{"model":"haiku","count":71,"cost":.70},{"model":"minimax","count":40,"cost":.07},{"model":"deepseek","count":26,"cost":.07},{"model":"kimi","count":19,"cost":.02},{"model":"gemini","count":1,"cost":0.00}],
+  "byModel": [{"model":"opus","count":8,"cost":1.50},{"model":"sonnet","count":245,"cost":9.18},{"model":"haiku","count":71,"cost":.70},{"model":"minimax","count":40,"cost":.07},{"model":"deepseek","count":26,"cost":.07},{"model":"kimi","count":19,"cost":.02},{"model":"gemini","count":1,"cost":0.00}],
   "dailyCounts": [
   {
     "date": "2026-02-06",
@@ -462,7 +504,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 11.51
+  "totalCost": 11.54
 },
   "tasks": {
   "tasks": [
