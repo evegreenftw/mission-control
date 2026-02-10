@@ -423,7 +423,31 @@
       "dueDate": "",
       "createdAt": "2026-02-10T06:53:47Z",
       "completed": false
+    },
+    {
+      "id": "36",
+      "title": "Build Community Equity Atlas Web App (EVE)",
+      "description": "Build web app from Google Drive instructions",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "development",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T06:59:05Z",
+      "completed": false
+    },
+    {
+      "id": "37",
+      "title": "Weekly planning",
+      "description": "Weekly planning session",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "general",
+      "status": "todo",
+      "dueDate": "2026-02-10",
+      "createdAt": "2026-02-10T07:10:09Z",
+      "completed": false
     }
   ],
-  "lastUpdated": "2026-02-10T06:53:47Z"
+  "lastUpdated": "2026-02-10T07:10:09Z"
 }
