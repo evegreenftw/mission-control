@@ -28,66 +28,40 @@ if [ -d "$HOME/.openclaw/workspace/.git" ]; then
   cd - > /dev/null
 fi
 
-# 3. Parse OpenClaw logs for model usage and cost (last 7 days)
-echo "🤖 Parsing model usage from logs..."
-MODEL_USAGE='{"byModel":[],"dailyCounts":[],"totalCost":0}'
-LOG_DIR="/tmp/openclaw"
-if [ -d "$LOG_DIR" ]; then
-  # Count model usage by grepping for model names
-  OPUS_COUNT=$(grep -oh 'claude-opus' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
-  SONNET_COUNT=$(grep -oh 'claude-sonnet' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
-  HAIKU_COUNT=$(grep -oh 'claude-haiku' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
-  MINIMAX_COUNT=$(grep -oh 'minimax' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
-  DEEPSEEK_COUNT=$(grep -oh 'deepseek' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
-  KIMI_COUNT=$(grep -oh 'kimi' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
-  GEMINI_COUNT=$(grep -oh 'gemini' "$LOG_DIR"/openclaw-*.log 2>/dev/null | wc -l | tr -d ' ')
+# 3. Update model usage history (incremental tracking)
+echo "🤖 Updating model usage..."
+"$MC_DIR/update-model-usage.sh"
+
+# Read from persistent history file
+HISTORY_FILE="$MC_DIR/model-usage-history.json"
+if [ -f "$HISTORY_FILE" ]; then
+  # Extract all-time totals
+  TOTAL_COST=$(jq -r '.totalCost' "$HISTORY_FILE")
   
-  # Estimate tokens per API call (conservative averages based on typical usage)
-  # Input/Output split roughly 60/40
-  AVG_INPUT_TOKENS=5000
-  AVG_OUTPUT_TOKENS=1500
+  # Build byModel array from allTime data
+  BY_MODEL=$(jq -r '
+    [.allTime | to_entries[] | 
+      select(.value.count > 0) | 
+      {model: .key, count: .value.count, cost: .value.cost}
+    ]
+  ' "$HISTORY_FILE")
   
-  # Calculate costs (price per million tokens)
-  # Anthropic: Opus $15/$75, Sonnet $3/$15, Haiku $0.80/$4
-  # Minimax M2.1: $0.30/$0.30 (128k context)
-  # DeepSeek v3: $0.27/$1.10
-  # Kimi K2.5: $0.30/$0.30
-  # Gemini Flash 2.5: Free (no cost)
-  
-  OPUS_COST=$(echo "scale=2; ($OPUS_COUNT * $AVG_INPUT_TOKENS * 15 / 1000000) + ($OPUS_COUNT * $AVG_OUTPUT_TOKENS * 75 / 1000000)" | bc)
-  SONNET_COST=$(echo "scale=2; ($SONNET_COUNT * $AVG_INPUT_TOKENS * 3 / 1000000) + ($SONNET_COUNT * $AVG_OUTPUT_TOKENS * 15 / 1000000)" | bc)
-  HAIKU_COST=$(echo "scale=2; ($HAIKU_COUNT * $AVG_INPUT_TOKENS * 0.80 / 1000000) + ($HAIKU_COUNT * $AVG_OUTPUT_TOKENS * 4 / 1000000)" | bc)
-  MINIMAX_COST=$(echo "scale=2; ($MINIMAX_COUNT * $AVG_INPUT_TOKENS * 0.30 / 1000000) + ($MINIMAX_COUNT * $AVG_OUTPUT_TOKENS * 0.30 / 1000000)" | bc)
-  DEEPSEEK_COST=$(echo "scale=2; ($DEEPSEEK_COUNT * $AVG_INPUT_TOKENS * 0.27 / 1000000) + ($DEEPSEEK_COUNT * $AVG_OUTPUT_TOKENS * 1.10 / 1000000)" | bc)
-  KIMI_COST=$(echo "scale=2; ($KIMI_COUNT * $AVG_INPUT_TOKENS * 0.30 / 1000000) + ($KIMI_COUNT * $AVG_OUTPUT_TOKENS * 0.30 / 1000000)" | bc)
-  GEMINI_COST="0.00"
-  
-  TOTAL_COST=$(echo "scale=2; $OPUS_COST + $SONNET_COST + $HAIKU_COST + $MINIMAX_COST + $DEEPSEEK_COST + $KIMI_COST" | bc)
-  
-  BY_MODEL='['
-  [ "$OPUS_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"opus\",\"count\":$OPUS_COUNT,\"cost\":$OPUS_COST},"
-  [ "$SONNET_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"sonnet\",\"count\":$SONNET_COUNT,\"cost\":$SONNET_COST},"
-  [ "$HAIKU_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"haiku\",\"count\":$HAIKU_COUNT,\"cost\":$HAIKU_COST},"
-  [ "$MINIMAX_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"minimax\",\"count\":$MINIMAX_COUNT,\"cost\":$MINIMAX_COST},"
-  [ "$DEEPSEEK_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"deepseek\",\"count\":$DEEPSEEK_COUNT,\"cost\":$DEEPSEEK_COST},"
-  [ "$KIMI_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"kimi\",\"count\":$KIMI_COUNT,\"cost\":$KIMI_COST},"
-  [ "$GEMINI_COUNT" -gt 0 ] && BY_MODEL="${BY_MODEL}{\"model\":\"gemini\",\"count\":$GEMINI_COUNT,\"cost\":$GEMINI_COST},"
-  BY_MODEL=$(echo "$BY_MODEL" | sed 's/,$//')
-  BY_MODEL="${BY_MODEL}]"
-  
-  # Get daily session counts (approximate - count unique timestamps per day)
-  DAILY_COUNTS=$(find "$LOG_DIR" -name "openclaw-*.log" -mtime -7 2>/dev/null | while read logfile; do
-    date_str=$(basename "$logfile" | sed 's/openclaw-//g' | sed 's/.log//g')
-    # Count lines with "tool" field as proxy for activity
-    count=$(grep -c '"tool"' "$logfile" 2>/dev/null || echo "1")
-    if [ "$count" -gt 0 ]; then
-        sessions=$((count / 10))  # Rough estimate: divide by avg tools per session
-        [ $sessions -lt 1 ] && sessions=1
-    else
-        sessions=1
-    fi
-    echo "{\"date\":\"$date_str\",\"sessions\":$sessions}"
-  done | jq -s '.' 2>/dev/null || echo '[]')
+  # Get recent daily counts (last 7 days)
+  LOG_DIR="/tmp/openclaw"
+  DAILY_COUNTS='[]'
+  if [ -d "$LOG_DIR" ]; then
+    DAILY_COUNTS=$(find "$LOG_DIR" -name "openclaw-*.log" -mtime -7 2>/dev/null | while read logfile; do
+      date_str=$(basename "$logfile" | sed 's/openclaw-//g' | sed 's/.log//g')
+      count=$(grep -c '"tool"' "$logfile" 2>/dev/null || echo "1")
+      if [ "$count" -gt 0 ]; then
+          sessions=$((count / 10))
+          [ $sessions -lt 1 ] && sessions=1
+      else
+          sessions=1
+      fi
+      echo "{\"date\":\"$date_str\",\"sessions\":$sessions}"
+    done | jq -s '.' 2>/dev/null || echo '[]')
+  fi
   
   MODEL_USAGE=$(cat <<EOF
 {
@@ -97,6 +71,9 @@ if [ -d "$LOG_DIR" ]; then
 }
 EOF
 )
+else
+  # Fallback if history file doesn't exist
+  MODEL_USAGE='{"byModel":[],"dailyCounts":[],"totalCost":0}'
 fi
 
 # 4. Read tasks from tasks.json

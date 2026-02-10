@@ -1,0 +1,98 @@
+{
+  "allTime": {
+    "opus": {
+      "count": 16,
+      "cost": 3
+    },
+    "sonnet": {
+      "count": 497,
+      "cost": 18.625
+    },
+    "haiku": {
+      "count": 146,
+      "cost": 1.45
+    },
+    "minimax": {
+      "count": 71,
+      "cost": 0.13040000000000002
+    },
+    "deepseek": {
+      "count": 45,
+      "cost": 0.1269
+    },
+    "kimi": {
+      "count": 33,
+      "cost": 0.0473
+    },
+    "gemini": {
+      "count": 2,
+      "cost": 0
+    }
+  },
+  "byMonth": {
+    "2026-02": {
+      "opus": {
+        "count": 16,
+        "cost": 3
+      },
+      "sonnet": {
+        "count": 497,
+        "cost": 18.625
+      },
+      "haiku": {
+        "count": 146,
+        "cost": 1.45
+      },
+      "minimax": {
+        "count": 71,
+        "cost": 0.13040000000000002
+      },
+      "deepseek": {
+        "count": 45,
+        "cost": 0.1269
+      },
+      "kimi": {
+        "count": 33,
+        "cost": 0.0473
+      },
+      "gemini": {
+        "count": 2,
+        "cost": 0
+      }
+    }
+  },
+  "byDay": {
+    "2026-02-09": {
+      "opus": {
+        "count": 16,
+        "cost": 3
+      },
+      "sonnet": {
+        "count": 497,
+        "cost": 18.625
+      },
+      "haiku": {
+        "count": 146,
+        "cost": 1.45
+      },
+      "minimax": {
+        "count": 71,
+        "cost": 0.13040000000000002
+      },
+      "deepseek": {
+        "count": 45,
+        "cost": 0.1269
+      },
+      "kimi": {
+        "count": 33,
+        "cost": 0.0473
+      },
+      "gemini": {
+        "count": 2,
+        "cost": 0
+      }
+    }
+  },
+  "lastCheck": "2026-02-10T03:22:50Z",
+  "totalCost": 23.3796
+}
