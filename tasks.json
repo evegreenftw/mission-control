@@ -68,10 +68,11 @@
       "assignedTo": "Eve",
       "priority": "high",
       "category": "development",
-      "status": "todo",
+      "status": "completed",
       "dueDate": "",
       "createdAt": "2026-02-10T03:35:17Z",
-      "completed": false
+      "completed": true,
+      "completedAt": "2026-02-10T05:03:49Z"
     },
     {
       "id": "7",
@@ -84,7 +85,20 @@
       "dueDate": "",
       "createdAt": "2026-02-10T03:35:17Z",
       "completed": false
+    },
+    {
+      "id": "8",
+      "title": "Fix Housing Pulse GIS map UX issues",
+      "description": "Fix map centering on Canada and vertical drag problems",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "general",
+      "status": "completed",
+      "dueDate": "",
+      "createdAt": "2026-02-10T05:03:53Z",
+      "completed": true,
+      "completedAt": "2026-02-10T05:03:57Z"
     }
   ],
-  "lastUpdated": "2026-02-10T03:35:17Z"
+  "lastUpdated": "2026-02-10T05:03:57Z"
 }
