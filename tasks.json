@@ -4,6 +4,7 @@
       "id": "1",
       "title": "Build Mission Control dashboard",
       "description": "Create PM app for tracking Eve's work and model spend",
+      "assignedTo": "Eve",
       "priority": "high",
       "category": "development",
       "status": "completed",
@@ -16,6 +17,7 @@
       "id": "2",
       "title": "Upgrade dashboard with real data",
       "description": "Add real model spend tracking, git activity, proper charts",
+      "assignedTo": "Eve",
       "priority": "high",
       "category": "development",
       "status": "inProgress",
@@ -26,10 +28,11 @@
     {
       "id": "3",
       "title": "Write 15 remaining blog articles",
-      "description": "Complete the content plan with GEO-optimized articles",
+      "description": "Complete the content plan with SEO-optimized articles",
+      "assignedTo": "Eve",
       "priority": "medium",
       "category": "content",
-      "status": "ideas",
+      "status": "todo",
       "dueDate": "2026-03-01",
       "createdAt": "2026-02-06T10:00:00Z",
       "completed": false
@@ -38,13 +41,50 @@
       "id": "4",
       "title": "Set up automated LinkedIn posting",
       "description": "Create workflow for 2-3 posts per week",
+      "assignedTo": "Eve",
       "priority": "medium",
       "category": "marketing",
-      "status": "assigned",
+      "status": "todo",
       "dueDate": "2026-02-15",
       "createdAt": "2026-02-06T10:00:00Z",
       "completed": false
+    },
+    {
+      "id": "5",
+      "title": "Do 442 Assignment 1",
+      "description": "Complete first assignment for course 442",
+      "assignedTo": "Tyler",
+      "priority": "high",
+      "category": "education",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T03:35:17Z",
+      "completed": false
+    },
+    {
+      "id": "6",
+      "title": "Create v1 of DialedIntelligence.com website build",
+      "description": "Build first version of company website",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "development",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T03:35:17Z",
+      "completed": false
+    },
+    {
+      "id": "7",
+      "title": "Exercise 20 minutes",
+      "description": "Daily exercise routine",
+      "assignedTo": "Tyler",
+      "priority": "medium",
+      "category": "health",
+      "status": "todo",
+      "dueDate": "",
+      "createdAt": "2026-02-10T03:35:17Z",
+      "completed": false
     }
   ],
-  "lastUpdated": "2026-02-06T10:30:00Z"
+  "lastUpdated": "2026-02-10T03:35:17Z"
 }
