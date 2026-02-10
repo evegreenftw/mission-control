@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-10T04:28:59Z",
+  "refreshedAt": "2026-02-10T05:17:26Z",
   "today": "2026-02-09",
   "calendar": {
   "events": [
@@ -488,37 +488,37 @@
   "byModel": [
   {
     "model": "opus",
-    "count": 48,
-    "cost": 9
+    "count": 56,
+    "cost": 10.5
   },
   {
     "model": "sonnet",
-    "count": 1507,
-    "cost": 56.5
+    "count": 1763,
+    "cost": 66.1
   },
   {
     "model": "haiku",
-    "count": 442,
-    "cost": 4.41
+    "count": 517,
+    "cost": 5.16
   },
   {
     "model": "minimax",
-    "count": 195,
-    "cost": 0.37200000000000005
+    "count": 226,
+    "cost": 0.43240000000000006
   },
   {
     "model": "deepseek",
-    "count": 121,
-    "cost": 0.35450000000000004
+    "count": 140,
+    "cost": 0.41140000000000004
   },
   {
     "model": "kimi",
-    "count": 89,
-    "cost": 0.1565
+    "count": 103,
+    "cost": 0.1838
   },
   {
     "model": "gemini",
-    "count": 6,
+    "count": 7,
     "cost": 0
   }
 ],
@@ -540,7 +540,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 70.79299999999999
+  "totalCost": 82.7876
 },
   "tasks": {
   "tasks": [
@@ -612,10 +612,11 @@
       "assignedTo": "Eve",
       "priority": "high",
       "category": "development",
-      "status": "todo",
+      "status": "completed",
       "dueDate": "",
       "createdAt": "2026-02-10T03:35:17Z",
-      "completed": false
+      "completed": true,
+      "completedAt": "2026-02-10T05:03:49Z"
     },
     {
       "id": "7",
@@ -628,9 +629,22 @@
       "dueDate": "",
       "createdAt": "2026-02-10T03:35:17Z",
       "completed": false
+    },
+    {
+      "id": "8",
+      "title": "Fix Housing Pulse GIS map UX issues",
+      "description": "Fix map centering on Canada and vertical drag problems",
+      "assignedTo": "Eve",
+      "priority": "high",
+      "category": "general",
+      "status": "completed",
+      "dueDate": "",
+      "createdAt": "2026-02-10T05:03:53Z",
+      "completed": true,
+      "completedAt": "2026-02-10T05:03:57Z"
     }
   ],
-  "lastUpdated": "2026-02-10T03:35:17Z"
+  "lastUpdated": "2026-02-10T05:03:57Z"
 },
   "weather": null
 }

@@ -1,62 +1,62 @@
 {
   "allTime": {
     "opus": {
-      "count": 24,
-      "cost": 4.5
+      "count": 56,
+      "cost": 10.5
     },
     "sonnet": {
-      "count": 747,
-      "cost": 28
+      "count": 1763,
+      "cost": 66.1
     },
     "haiku": {
-      "count": 219,
-      "cost": 2.1799999999999997
+      "count": 517,
+      "cost": 5.16
     },
     "minimax": {
-      "count": 102,
-      "cost": 0.19080000000000003
+      "count": 226,
+      "cost": 0.43240000000000006
     },
     "deepseek": {
-      "count": 64,
-      "cost": 0.18380000000000002
+      "count": 140,
+      "cost": 0.41140000000000004
     },
     "kimi": {
-      "count": 47,
-      "cost": 0.0746
+      "count": 103,
+      "cost": 0.1838
     },
     "gemini": {
-      "count": 3,
+      "count": 7,
       "cost": 0
     }
   },
   "byMonth": {
     "2026-02": {
       "opus": {
-        "count": 24,
-        "cost": 4.5
+        "count": 56,
+        "cost": 10.5
       },
       "sonnet": {
-        "count": 747,
-        "cost": 28
+        "count": 1763,
+        "cost": 66.1
       },
       "haiku": {
-        "count": 219,
-        "cost": 2.1799999999999997
+        "count": 517,
+        "cost": 5.16
       },
       "minimax": {
-        "count": 102,
-        "cost": 0.19080000000000003
+        "count": 226,
+        "cost": 0.43240000000000006
       },
       "deepseek": {
-        "count": 64,
-        "cost": 0.18380000000000002
+        "count": 140,
+        "cost": 0.41140000000000004
       },
       "kimi": {
-        "count": 47,
-        "cost": 0.0746
+        "count": 103,
+        "cost": 0.1838
       },
       "gemini": {
-        "count": 3,
+        "count": 7,
         "cost": 0
       }
     }
@@ -64,35 +64,35 @@
   "byDay": {
     "2026-02-09": {
       "opus": {
-        "count": 24,
-        "cost": 4.5
+        "count": 56,
+        "cost": 10.5
       },
       "sonnet": {
-        "count": 747,
-        "cost": 28
+        "count": 1763,
+        "cost": 66.1
       },
       "haiku": {
-        "count": 219,
-        "cost": 2.1799999999999997
+        "count": 517,
+        "cost": 5.16
       },
       "minimax": {
-        "count": 102,
-        "cost": 0.19080000000000003
+        "count": 226,
+        "cost": 0.43240000000000006
       },
       "deepseek": {
-        "count": 64,
-        "cost": 0.18380000000000002
+        "count": 140,
+        "cost": 0.41140000000000004
       },
       "kimi": {
-        "count": 47,
-        "cost": 0.0746
+        "count": 103,
+        "cost": 0.1838
       },
       "gemini": {
-        "count": 3,
+        "count": 7,
         "cost": 0
       }
     }
   },
-  "lastCheck": "2026-02-10T03:23:01Z",
-  "totalCost": 35.1292
+  "lastCheck": "2026-02-10T05:17:27Z",
+  "totalCost": 82.7876
 }
