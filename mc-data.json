@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-11T14:17:21Z",
+  "refreshedAt": "2026-02-11T14:36:57Z",
   "today": "2026-02-11",
   "calendar": {
   "events": [
@@ -457,23 +457,15 @@
 ],
   "dailyCounts": [
   {
+    "date": "2026-02-11",
+    "sessions": 1
+  },
+  {
     "date": "2026-02-10",
     "sessions": 1
   },
   {
     "date": "2026-02-06",
-    "sessions": 1
-  },
-  {
-    "date": "2026-02-07",
-    "sessions": 1
-  },
-  {
-    "date": "2026-02-09",
-    "sessions": 1
-  },
-  {
-    "date": "2026-02-08",
     "sessions": 1
   }
 ],
