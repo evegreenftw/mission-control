@@ -1,62 +1,62 @@
 {
   "allTime": {
     "opus": {
-      "count": 56,
-      "cost": 10.5
+      "count": 360,
+      "cost": 67.5
     },
     "sonnet": {
-      "count": 1763,
-      "cost": 66.1
+      "count": 12774,
+      "cost": 479.01249999999993
     },
     "haiku": {
-      "count": 517,
-      "cost": 5.16
+      "count": 3866,
+      "cost": 38.650000000000006
     },
     "minimax": {
-      "count": 226,
-      "cost": 0.43240000000000006
+      "count": 1404,
+      "cost": 2.7276000000000002
     },
     "deepseek": {
-      "count": 140,
-      "cost": 0.41140000000000004
+      "count": 862,
+      "cost": 2.5736000000000008
     },
     "kimi": {
-      "count": 103,
-      "cost": 0.1838
+      "count": 635,
+      "cost": 1.2212000000000007
     },
     "gemini": {
-      "count": 7,
+      "count": 45,
       "cost": 0
     }
   },
   "byMonth": {
     "2026-02": {
       "opus": {
-        "count": 56,
-        "cost": 10.5
+        "count": 360,
+        "cost": 67.5
       },
       "sonnet": {
-        "count": 1763,
-        "cost": 66.1
+        "count": 12774,
+        "cost": 479.01249999999993
       },
       "haiku": {
-        "count": 517,
-        "cost": 5.16
+        "count": 3866,
+        "cost": 38.650000000000006
       },
       "minimax": {
-        "count": 226,
-        "cost": 0.43240000000000006
+        "count": 1404,
+        "cost": 2.7276000000000002
       },
       "deepseek": {
-        "count": 140,
-        "cost": 0.41140000000000004
+        "count": 862,
+        "cost": 2.5736000000000008
       },
       "kimi": {
-        "count": 103,
-        "cost": 0.1838
+        "count": 635,
+        "cost": 1.2212000000000007
       },
       "gemini": {
-        "count": 7,
+        "count": 45,
         "cost": 0
       }
     }
@@ -64,35 +64,65 @@
   "byDay": {
     "2026-02-09": {
       "opus": {
-        "count": 56,
-        "cost": 10.5
+        "count": 88,
+        "cost": 16.5
       },
       "sonnet": {
-        "count": 1763,
-        "cost": 66.1
+        "count": 2816,
+        "cost": 105.58749999999999
       },
       "haiku": {
-        "count": 517,
-        "cost": 5.16
+        "count": 823,
+        "cost": 8.219999999999999
       },
       "minimax": {
-        "count": 226,
-        "cost": 0.43240000000000006
+        "count": 350,
+        "cost": 0.674
       },
       "deepseek": {
-        "count": 140,
-        "cost": 0.41140000000000004
+        "count": 216,
+        "cost": 0.6389999999999999
       },
       "kimi": {
-        "count": 103,
-        "cost": 0.1838
+        "count": 159,
+        "cost": 0.293
       },
       "gemini": {
-        "count": 7,
+        "count": 11,
+        "cost": 0
+      }
+    },
+    "2026-02-10": {
+      "opus": {
+        "count": 272,
+        "cost": 51
+      },
+      "sonnet": {
+        "count": 9958,
+        "cost": 373.4249999999999
+      },
+      "haiku": {
+        "count": 3043,
+        "cost": 30.430000000000003
+      },
+      "minimax": {
+        "count": 1054,
+        "cost": 2.0536
+      },
+      "deepseek": {
+        "count": 646,
+        "cost": 1.9345999999999988
+      },
+      "kimi": {
+        "count": 476,
+        "cost": 0.9281999999999998
+      },
+      "gemini": {
+        "count": 34,
         "cost": 0
       }
     }
   },
-  "lastCheck": "2026-02-10T05:17:27Z",
-  "totalCost": 82.7876
+  "lastCheck": "2026-02-11T05:35:29Z",
+  "totalCost": 591.6849
 }
