@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-12T15:40:52Z",
+  "refreshedAt": "2026-02-12T16:15:39Z",
   "today": "2026-02-12",
   "calendar": {
   "events": [
@@ -76,6 +76,37 @@
       "status": "confirmed",
       "summary": "Deep Learning",
       "updated": "2026-02-10T16:32:24.460Z"
+    },
+    {
+      "created": "2026-02-12T16:11:11.000Z",
+      "creator": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "end": {
+        "dateTime": "2026-02-12T13:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "etag": "\"3541825343899006\"",
+      "eventType": "default",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NDQ5aG5lazVoYmw2cTVraTZ2bzc4N3EwcnUgdHlsZXJkaWFsMTgxOEBt",
+      "iCalUID": "449hnek5hbl6q5ki6vo787q0ru@google.com",
+      "id": "449hnek5hbl6q5ki6vo787q0ru",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "tylerdial1818@gmail.com",
+        "self": true
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-02-12T11:00:00-07:00",
+        "timeZone": "America/Denver"
+      },
+      "status": "confirmed",
+      "summary": "Deep Work: Socio",
+      "updated": "2026-02-12T16:11:11.949Z"
     },
     {
       "created": "2026-02-10T16:30:53.000Z",
@@ -356,46 +387,9 @@
       "status": "confirmed",
       "summary": "498 Capstone Huddle",
       "updated": "2026-02-12T00:53:58.453Z"
-    },
-    {
-      "created": "2024-12-03T19:57:23.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "description": "Personal planning for weekly, medium-term, and long term goals.",
-      "end": {
-        "dateTime": "2026-02-15T12:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3539596444033598\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=Nmc5dHU4cGVhOXBlOGhpMG4yZ2QyY3NsNmNfMjAyNjAyMTVUMTcwMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "6g9tu8pea9pe8hi0n2gd2csl6c@google.com",
-      "id": "6g9tu8pea9pe8hi0n2gd2csl6c_20260215T170000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-15T10:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "6g9tu8pea9pe8hi0n2gd2csl6c",
-      "reminders": {
-        "useDefault": true
-      },
-      "start": {
-        "dateTime": "2026-02-15T10:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Weekly Planning",
-      "updated": "2026-01-30T18:37:02.016Z"
     }
   ],
-  "nextPageToken": "EiwKKhIoCgYIkPfHzAYSHgocCho2Zzl0dThwZWE5cGU4aGkwbjJnZDJjc2w2Y8A-AQ=="
+  "nextPageToken": "EiwKKhIoCgYI8Nm-zAYSHgocCho2cmVpMGRndGtvcTlnZzRqaXRiOGE5cDFwbMA-AQ=="
 },
   "gitActivity": [
   {
@@ -427,37 +421,37 @@
   "byModel": [
   {
     "model": "opus",
-    "count": 848,
-    "cost": 159
+    "count": 856,
+    "cost": 160.5
   },
   {
     "model": "sonnet",
-    "count": 33734,
-    "cost": 1265.0124999999998
+    "count": 34111,
+    "cost": 1279.1499999999999
   },
   {
     "model": "haiku",
-    "count": 11085,
-    "cost": 110.84
+    "count": 11220,
+    "cost": 112.19
   },
   {
     "model": "minimax",
-    "count": 3295,
-    "cost": 6.411999999999983
+    "count": 3326,
+    "cost": 6.472399999999983
   },
   {
     "model": "deepseek",
-    "count": 2021,
-    "cost": 6.044499999999996
+    "count": 2040,
+    "cost": 6.1013999999999955
   },
   {
     "model": "kimi",
-    "count": 1489,
-    "cost": 2.8865
+    "count": 1503,
+    "cost": 2.9137999999999997
   },
   {
     "model": "gemini",
-    "count": 106,
+    "count": 107,
     "cost": 0
   }
 ],
@@ -479,7 +473,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 1550.1954999999998
+  "totalCost": 1567.3275999999998
 },
   "tasks": {
   "tasks": [
