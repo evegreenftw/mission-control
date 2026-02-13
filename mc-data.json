@@ -1,396 +1,7 @@
 {
-  "refreshedAt": "2026-02-13T05:17:22Z",
+  "refreshedAt": "2026-02-13T05:43:08Z",
   "today": "2026-02-12",
-  "calendar": {
-  "events": [
-    {
-      "created": "2026-01-26T17:11:34.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3539282691051998\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=NHA1cTlrN2NybHEwYTc3aWdxOW1mc3Y5MzZfMjAyNjAyMTJUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "4p5q9k7crlq0a77igq9mfsv936@google.com",
-      "id": "4p5q9k7crlq0a77igq9mfsv936_20260212T140000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-12T07:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "4p5q9k7crlq0a77igq9mfsv936",
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-12T07:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Morning Routine",
-      "updated": "2026-01-28T23:02:25.525Z"
-    },
-    {
-      "created": "2026-01-26T17:13:49.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T10:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3541482288920318\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=MWFrdWMwZjRjOGlwdG1tZ2hkZHRrODRjZXZfMjAyNjAyMTJUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "1akuc0f4c8iptmmghddtk84cev@google.com",
-      "id": "1akuc0f4c8iptmmghddtk84cev_20260212T143000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-12T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "1akuc0f4c8iptmmghddtk84cev",
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-12T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Deep Learning",
-      "updated": "2026-02-10T16:32:24.460Z"
-    },
-    {
-      "created": "2026-02-12T16:11:11.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T13:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3541825343899006\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=NDQ5aG5lazVoYmw2cTVraTZ2bzc4N3EwcnUgdHlsZXJkaWFsMTgxOEBt",
-      "iCalUID": "449hnek5hbl6q5ki6vo787q0ru@google.com",
-      "id": "449hnek5hbl6q5ki6vo787q0ru",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "reminders": {
-        "useDefault": true
-      },
-      "start": {
-        "dateTime": "2026-02-12T11:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Deep Work: Socio",
-      "updated": "2026-02-12T16:11:11.949Z"
-    },
-    {
-      "created": "2026-02-10T16:30:53.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T16:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3541482250057502\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=Mms5MjQ5dTAyN25pMnZ0bXJ1cnFrbjZzaGggdHlsZXJkaWFsMTgxOEBt",
-      "iCalUID": "2k9249u027ni2vtmrurqkn6shh@google.com",
-      "id": "2k9249u027ni2vtmrurqkn6shh",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-12T14:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Deep Work: Portfolio",
-      "updated": "2026-02-10T16:32:05.028Z"
-    },
-    {
-      "created": "2026-02-10T16:30:30.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T17:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3541482061606270\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=MmtoNm8yZHZpMHNscjU1NW1xZHVvdXVpMzMgdHlsZXJkaWFsMTgxOEBt",
-      "iCalUID": "2kh6o2dvi0slr555mqduouui33@google.com",
-      "id": "2kh6o2dvi0slr555mqduouui33",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "reminders": {
-        "useDefault": true
-      },
-      "start": {
-        "dateTime": "2026-02-12T16:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Time to Post",
-      "updated": "2026-02-10T16:30:30.803Z"
-    },
-    {
-      "created": "2026-02-10T16:28:33.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-12T22:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3541481827193694\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=MnU0aTJtZXI4OHBrNG9hajBubjJtaW8xZDEgdHlsZXJkaWFsMTgxOEBt",
-      "iCalUID": "2u4i2mer88pk4oaj0nn2mio1d1@google.com",
-      "id": "2u4i2mer88pk4oaj0nn2mio1d1",
-      "kind": "calendar#event",
-      "location": "4151 N Traverse Mountain Blvd apt 19 305, Lehi, UT 84043, USA",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "reminders": {
-        "useDefault": true
-      },
-      "start": {
-        "dateTime": "2026-02-12T19:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Music Club: Maude Latour",
-      "updated": "2026-02-10T16:28:33.596Z"
-    },
-    {
-      "created": "2026-01-26T17:12:01.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-13T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3539282723131294\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=N3VpbGRsY2tqNGtiN2tudmF1ZTlhZ3UwMTdfMjAyNjAyMTNUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "7uildlckj4kb7knvaue9agu017@google.com",
-      "id": "7uildlckj4kb7knvaue9agu017_20260213T140000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-13T07:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "7uildlckj4kb7knvaue9agu017",
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-13T07:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Morning Routine",
-      "updated": "2026-01-28T23:02:41.565Z"
-    },
-    {
-      "created": "2026-01-26T17:12:14.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-13T10:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3539597212926238\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=MWg5bmRjdW91ZHBsZmh0aTM2bDFlbmJyMHFfMjAyNjAyMTNUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "1h9ndcuoudplfhti36l1enbr0q_R20260206T143000@google.com",
-      "id": "1h9ndcuoudplfhti36l1enbr0q_20260213T143000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-13T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "1h9ndcuoudplfhti36l1enbr0q_R20260206T143000",
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-13T07:30:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Deep Learning",
-      "updated": "2026-01-30T18:43:26.463Z"
-    },
-    {
-      "created": "2026-02-10T16:31:54.000Z",
-      "creator": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "end": {
-        "dateTime": "2026-02-13T16:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3541482247818686\"",
-      "eventType": "default",
-      "htmlLink": "https://www.google.com/calendar/event?eid=NHNwN3IxdjduNjE3MTliMDZuMWduMG9oZGcgdHlsZXJkaWFsMTgxOEBt",
-      "iCalUID": "4sp7r1v7n61719b06n1gn0ohdg@google.com",
-      "id": "4sp7r1v7n61719b06n1gn0ohdg",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial1818@gmail.com",
-        "self": true
-      },
-      "reminders": {
-        "useDefault": true
-      },
-      "sequence": 1,
-      "start": {
-        "dateTime": "2026-02-13T14:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "Deep Work: Portfolio",
-      "updated": "2026-02-10T16:32:03.909Z"
-    },
-    {
-      "attendees": [
-        {
-          "email": "tylerdial1818@gmail.com",
-          "responseStatus": "needsAction",
-          "self": true
-        },
-        {
-          "email": "tylerdial2026@u.northwestern.edu",
-          "organizer": true,
-          "responseStatus": "accepted"
-        },
-        {
-          "email": "tejaswigorde@gmail.com",
-          "responseStatus": "needsAction"
-        },
-        {
-          "email": "tejaswigorde2025@u.northwestern.edu",
-          "responseStatus": "needsAction"
-        }
-      ],
-      "conferenceData": {
-        "conferenceId": "wyo-ymde-enk",
-        "conferenceSolution": {
-          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png",
-          "key": {
-            "type": "hangoutsMeet"
-          },
-          "name": "Google Meet"
-        },
-        "entryPoints": [
-          {
-            "entryPointType": "video",
-            "label": "meet.google.com/wyo-ymde-enk",
-            "uri": "https://meet.google.com/wyo-ymde-enk"
-          },
-          {
-            "entryPointType": "phone",
-            "label": "+1 651-571-1132",
-            "pin": "518375049",
-            "regionCode": "US",
-            "uri": "tel:+1-651-571-1132"
-          }
-        ]
-      },
-      "created": "2026-02-12T00:53:52.000Z",
-      "creator": {
-        "email": "tylerdial2026@u.northwestern.edu"
-      },
-      "end": {
-        "dateTime": "2026-02-13T17:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "etag": "\"3541715276907806\"",
-      "eventType": "default",
-      "hangoutLink": "https://meet.google.com/wyo-ymde-enk",
-      "htmlLink": "https://www.google.com/calendar/event?eid=NnJlaTBkZ3Rrb3E5Z2c0aml0YjhhOXAxcGxfMjAyNjAyMTNUMjMwMDAwWiB0eWxlcmRpYWwxODE4QG0",
-      "iCalUID": "6rei0dgtkoq9gg4jitb8a9p1pl@google.com",
-      "id": "6rei0dgtkoq9gg4jitb8a9p1pl_20260213T230000Z",
-      "kind": "calendar#event",
-      "organizer": {
-        "email": "tylerdial2026@u.northwestern.edu"
-      },
-      "originalStartTime": {
-        "dateTime": "2026-02-13T16:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "recurringEventId": "6rei0dgtkoq9gg4jitb8a9p1pl",
-      "reminders": {
-        "useDefault": true
-      },
-      "start": {
-        "dateTime": "2026-02-13T16:00:00-07:00",
-        "timeZone": "America/Denver"
-      },
-      "status": "confirmed",
-      "summary": "498 Capstone Huddle",
-      "updated": "2026-02-12T00:53:58.453Z"
-    }
-  ],
-  "nextPageToken": "EiwKKhIoCgYI8Nm-zAYSHgocCho2cmVpMGRndGtvcTlnZzRqaXRiOGE5cDFwbMA-AQ=="
-},
+  "calendar": {"events":[]},
   "gitActivity": [
   {
     "hash": "100b14c",
@@ -421,37 +32,37 @@
   "byModel": [
   {
     "model": "opus",
-    "count": 1072,
-    "cost": 201
+    "count": 1080,
+    "cost": 202.5
   },
   {
     "model": "sonnet",
-    "count": 44523,
-    "cost": 1669.6
+    "count": 44916,
+    "cost": 1684.3374999999999
   },
   {
     "model": "haiku",
-    "count": 15051,
-    "cost": 150.49999999999997
+    "count": 15200,
+    "cost": 151.98999999999998
   },
   {
     "model": "minimax",
-    "count": 4163,
-    "cost": 8.10319999999997
+    "count": 4194,
+    "cost": 8.16359999999997
   },
   {
     "model": "deepseek",
-    "count": 2553,
-    "cost": 7.637699999999988
+    "count": 2572,
+    "cost": 7.694599999999988
   },
   {
     "model": "kimi",
-    "count": 1881,
-    "cost": 3.6508999999999965
+    "count": 1895,
+    "cost": 3.6781999999999964
   },
   {
     "model": "gemini",
-    "count": 134,
+    "count": 135,
     "cost": 0
   }
 ],
@@ -473,7 +84,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 2040.4918
+  "totalCost": 2058.3638999999994
 },
   "tasks": {
   "tasks": [
