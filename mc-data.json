@@ -1,6 +1,6 @@
 {
-  "refreshedAt": "2026-02-13T06:43:20Z",
-  "today": "2026-02-12",
+  "refreshedAt": "2026-02-13T07:17:33Z",
+  "today": "2026-02-13",
   "calendar": {"events":[]},
   "gitActivity": [
   {
@@ -8,55 +8,43 @@
     "message": "Add content drafts for review: 3 articles + LinkedIn posts",
     "author": "Eve Green",
     "date": "2026-02-06T00:29:03-07:00"
-  },
-  {
-    "hash": "eb29efb",
-    "message": "Upgrade Mission Control to v2.0: real data, Chart.js, better UX",
-    "author": "Eve Green",
-    "date": "2026-02-06T00:00:33-07:00"
-  },
-  {
-    "hash": "0c8b39e",
-    "message": "Add Mission Control with live calendar sync and 6-hour cron refresh",
-    "author": "Eve Green",
-    "date": "2026-02-05T23:53:09-07:00"
   }
 ],
   "modelUsage": {
   "byModel": [
   {
     "model": "opus",
-    "count": 1088,
-    "cost": 204
+    "count": 1096,
+    "cost": 205.5
   },
   {
     "model": "sonnet",
-    "count": 45310,
-    "cost": 1699.1125
+    "count": 45705,
+    "cost": 1713.925
   },
   {
     "model": "haiku",
-    "count": 15350,
-    "cost": 153.48999999999998
+    "count": 15500,
+    "cost": 154.98999999999998
   },
   {
     "model": "minimax",
-    "count": 4225,
-    "cost": 8.22399999999997
+    "count": 4256,
+    "cost": 8.28439999999997
   },
   {
     "model": "deepseek",
-    "count": 2591,
-    "cost": 7.751499999999988
+    "count": 2610,
+    "cost": 7.808399999999987
   },
   {
     "model": "kimi",
-    "count": 1909,
-    "cost": 3.7054999999999962
+    "count": 1923,
+    "cost": 3.732799999999996
   },
   {
     "model": "gemini",
-    "count": 136,
+    "count": 137,
     "cost": 0
   }
 ],
@@ -78,7 +66,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 2076.2835
+  "totalCost": 2094.2405999999996
 },
   "tasks": {
   "tasks": [
