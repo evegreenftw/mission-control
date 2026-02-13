@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-13T16:17:21Z",
+  "refreshedAt": "2026-02-13T16:45:28Z",
   "today": "2026-02-13",
   "calendar": {"events":[]},
   "gitActivity": [],
@@ -7,37 +7,37 @@
   "byModel": [
   {
     "model": "opus",
-    "count": 1240,
-    "cost": 232.5
+    "count": 1248,
+    "cost": 234
   },
   {
     "model": "sonnet",
-    "count": 52900,
-    "cost": 1983.7375
+    "count": 53305,
+    "cost": 1998.925
   },
   {
     "model": "haiku",
-    "count": 18290,
-    "cost": 182.89000000000001
+    "count": 18450,
+    "cost": 184.49
   },
   {
     "model": "minimax",
-    "count": 4814,
-    "cost": 9.371599999999962
+    "count": 4845,
+    "cost": 9.431999999999961
   },
   {
     "model": "deepseek",
-    "count": 2952,
-    "cost": 8.832599999999996
+    "count": 2971,
+    "cost": 8.889499999999996
   },
   {
     "model": "kimi",
-    "count": 2175,
-    "cost": 4.224199999999998
+    "count": 2189,
+    "cost": 4.251499999999998
   },
   {
     "model": "gemini",
-    "count": 155,
+    "count": 156,
     "cost": 0
   }
 ],
@@ -55,7 +55,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 2421.5559000000003
+  "totalCost": 2439.9879999999994
 },
   "tasks": {
   "tasks": [
