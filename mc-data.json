@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-13T02:17:25Z",
+  "refreshedAt": "2026-02-13T02:42:40Z",
   "today": "2026-02-12",
   "calendar": {
   "events": [
@@ -421,37 +421,37 @@
   "byModel": [
   {
     "model": "opus",
-    "count": 1024,
-    "cost": 192
+    "count": 1032,
+    "cost": 193.5
   },
   {
     "model": "sonnet",
-    "count": 42174,
-    "cost": 1581.5125
+    "count": 42564,
+    "cost": 1596.1375
   },
   {
     "model": "haiku",
-    "count": 14169,
-    "cost": 141.67999999999998
+    "count": 14315,
+    "cost": 143.14
   },
   {
     "model": "minimax",
-    "count": 3977,
-    "cost": 7.7407999999999735
+    "count": 4008,
+    "cost": 7.801199999999973
   },
   {
     "model": "deepseek",
-    "count": 2439,
-    "cost": 7.29629999999999
+    "count": 2458,
+    "cost": 7.3531999999999895
   },
   {
     "model": "kimi",
-    "count": 1797,
-    "cost": 3.487099999999997
+    "count": 1811,
+    "cost": 3.514399999999997
   },
   {
     "model": "gemini",
-    "count": 128,
+    "count": 129,
     "cost": 0
   }
 ],
@@ -473,7 +473,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 1933.7167000000002
+  "totalCost": 1951.4463
 },
   "tasks": {
   "tasks": [
