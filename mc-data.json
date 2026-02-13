@@ -1,50 +1,43 @@
 {
-  "refreshedAt": "2026-02-13T07:17:33Z",
+  "refreshedAt": "2026-02-13T07:43:31Z",
   "today": "2026-02-13",
   "calendar": {"events":[]},
-  "gitActivity": [
-  {
-    "hash": "100b14c",
-    "message": "Add content drafts for review: 3 articles + LinkedIn posts",
-    "author": "Eve Green",
-    "date": "2026-02-06T00:29:03-07:00"
-  }
-],
+  "gitActivity": [],
   "modelUsage": {
   "byModel": [
   {
     "model": "opus",
-    "count": 1096,
-    "cost": 205.5
+    "count": 1104,
+    "cost": 207
   },
   {
     "model": "sonnet",
-    "count": 45705,
-    "cost": 1713.925
+    "count": 46100,
+    "cost": 1728.7375
   },
   {
     "model": "haiku",
-    "count": 15500,
-    "cost": 154.98999999999998
+    "count": 15651,
+    "cost": 156.49999999999997
   },
   {
     "model": "minimax",
-    "count": 4256,
-    "cost": 8.28439999999997
+    "count": 4287,
+    "cost": 8.34479999999997
   },
   {
     "model": "deepseek",
-    "count": 2610,
-    "cost": 7.808399999999987
+    "count": 2629,
+    "cost": 7.865299999999987
   },
   {
     "model": "kimi",
-    "count": 1923,
-    "cost": 3.732799999999996
+    "count": 1937,
+    "cost": 3.760099999999996
   },
   {
     "model": "gemini",
-    "count": 137,
+    "count": 138,
     "cost": 0
   }
 ],
@@ -66,7 +59,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 2094.2405999999996
+  "totalCost": 2112.2076999999995
 },
   "tasks": {
   "tasks": [
