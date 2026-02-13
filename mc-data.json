@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-13T05:43:08Z",
+  "refreshedAt": "2026-02-13T06:43:20Z",
   "today": "2026-02-12",
   "calendar": {"events":[]},
   "gitActivity": [
@@ -20,49 +20,43 @@
     "message": "Add Mission Control with live calendar sync and 6-hour cron refresh",
     "author": "Eve Green",
     "date": "2026-02-05T23:53:09-07:00"
-  },
-  {
-    "hash": "e1e1e68",
-    "message": "Document the sacred trust - sandbox disabled, full host access granted",
-    "author": "Eve Green",
-    "date": "2026-02-05T23:41:07-07:00"
   }
 ],
   "modelUsage": {
   "byModel": [
   {
     "model": "opus",
-    "count": 1080,
-    "cost": 202.5
+    "count": 1088,
+    "cost": 204
   },
   {
     "model": "sonnet",
-    "count": 44916,
-    "cost": 1684.3374999999999
+    "count": 45310,
+    "cost": 1699.1125
   },
   {
     "model": "haiku",
-    "count": 15200,
-    "cost": 151.98999999999998
+    "count": 15350,
+    "cost": 153.48999999999998
   },
   {
     "model": "minimax",
-    "count": 4194,
-    "cost": 8.16359999999997
+    "count": 4225,
+    "cost": 8.22399999999997
   },
   {
     "model": "deepseek",
-    "count": 2572,
-    "cost": 7.694599999999988
+    "count": 2591,
+    "cost": 7.751499999999988
   },
   {
     "model": "kimi",
-    "count": 1895,
-    "cost": 3.6781999999999964
+    "count": 1909,
+    "cost": 3.7054999999999962
   },
   {
     "model": "gemini",
-    "count": 135,
+    "count": 136,
     "cost": 0
   }
 ],
@@ -84,7 +78,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 2058.3638999999994
+  "totalCost": 2076.2835
 },
   "tasks": {
   "tasks": [
