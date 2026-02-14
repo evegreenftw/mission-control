@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-14T14:17:21Z",
+  "refreshedAt": "2026-02-14T14:31:21Z",
   "today": "2026-02-14",
   "calendar": {"events":[]},
   "gitActivity": [],
@@ -43,11 +43,11 @@
 ],
   "dailyCounts": [
   {
-    "date": "2026-02-06",
+    "date": "2026-02-14",
     "sessions": 1
   },
   {
-    "date": "2026-02-12",
+    "date": "2026-02-06",
     "sessions": 1
   },
   {
