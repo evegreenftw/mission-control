@@ -17,7 +17,8 @@ SEVEN_DAYS_AGO=$(date -v-7d +%Y-%m-%d 2>/dev/null || date -d "7 days ago" +%Y-%m
 
 # 1. Get calendar events for next 14 days
 echo "📅 Fetching calendar events..."
-CALENDAR_DATA=$(gog calendar events tylerdial1818@gmail.com --from today --to "$(date -v+14d +%Y-%m-%d 2>/dev/null || date -d '14 days' +%Y-%m-%d)" --json 2>/dev/null || echo '{"events":[]}')
+CALENDAR_EVENTS=$(python3 ~/.openclaw/sandboxes/agent-main-0d71ad7a/google-calendar-integration/calendar_api.py upcoming --days 14 --json 2>/dev/null || echo '[]')
+CALENDAR_DATA=$(echo "{\"events\": $CALENDAR_EVENTS}")
 
 # 2. Get git activity from workspace
 echo "📊 Fetching git activity..."
@@ -52,8 +53,10 @@ if [ -f "$HISTORY_FILE" ]; then
   if [ -d "$LOG_DIR" ]; then
     DAILY_COUNTS=$(find "$LOG_DIR" -name "openclaw-*.log" -mtime -7 2>/dev/null | while read logfile; do
       date_str=$(basename "$logfile" | sed 's/openclaw-//g' | sed 's/.log//g')
-      count=$(grep -c '"tool"' "$logfile" 2>/dev/null || echo "1")
-      if [ "$count" -gt 0 ]; then
+      count=$(grep -c '"tool"' "$logfile" 2>/dev/null || echo 1)
+      # Ensure count is an integer by stripping whitespace
+      count=$(echo "$count" | tr -d '[:space:]')
+      if [ "$count" -gt 0 ] 2>/dev/null; then
           sessions=$((count / 10))
           [ $sessions -lt 1 ] && sessions=1
       else

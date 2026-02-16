@@ -49,14 +49,27 @@ GEMINI_NEW=0
 
 # Get recent log files (modified in last hour to catch new usage)
 for logfile in $(find "$LOG_DIR" -name "openclaw-*.log" -mmin -60 2>/dev/null); do
-  # Count occurrences of each model in this log
-  OPUS_NEW=$((OPUS_NEW + $(grep -c 'claude-opus' "$logfile" 2>/dev/null || echo 0)))
-  SONNET_NEW=$((SONNET_NEW + $(grep -c 'claude-sonnet' "$logfile" 2>/dev/null || echo 0)))
-  HAIKU_NEW=$((HAIKU_NEW + $(grep -c 'claude-haiku' "$logfile" 2>/dev/null || echo 0)))
-  MINIMAX_NEW=$((MINIMAX_NEW + $(grep -c 'minimax' "$logfile" 2>/dev/null || echo 0)))
-  DEEPSEEK_NEW=$((DEEPSEEK_NEW + $(grep -c 'deepseek' "$logfile" 2>/dev/null || echo 0)))
-  KIMI_NEW=$((KIMI_NEW + $(grep -c 'kimi' "$logfile" 2>/dev/null || echo 0)))
-  GEMINI_NEW=$((GEMINI_NEW + $(grep -c 'gemini' "$logfile" 2>/dev/null || echo 0)))
+  # Count occurrences of each model in this log (strip all whitespace to ensure clean integer)
+  OPUS_COUNT=$(grep -c 'claude-opus' "$logfile" 2>/dev/null | tr -d '[:space:]' || echo 0)
+  OPUS_NEW=$((OPUS_NEW + OPUS_COUNT))
+  
+  SONNET_COUNT=$(grep -c 'claude-sonnet' "$logfile" 2>/dev/null | tr -d '[:space:]' || echo 0)
+  SONNET_NEW=$((SONNET_NEW + SONNET_COUNT))
+  
+  HAIKU_COUNT=$(grep -c 'claude-haiku' "$logfile" 2>/dev/null | tr -d '[:space:]' || echo 0)
+  HAIKU_NEW=$((HAIKU_NEW + HAIKU_COUNT))
+  
+  MINIMAX_COUNT=$(grep -c 'minimax' "$logfile" 2>/dev/null | tr -d '[:space:]' || echo 0)
+  MINIMAX_NEW=$((MINIMAX_NEW + MINIMAX_COUNT))
+  
+  DEEPSEEK_COUNT=$(grep -c 'deepseek' "$logfile" 2>/dev/null | tr -d '[:space:]' || echo 0)
+  DEEPSEEK_NEW=$((DEEPSEEK_NEW + DEEPSEEK_COUNT))
+  
+  KIMI_COUNT=$(grep -c 'kimi' "$logfile" 2>/dev/null | tr -d '[:space:]' || echo 0)
+  KIMI_NEW=$((KIMI_NEW + KIMI_COUNT))
+  
+  GEMINI_COUNT=$(grep -c 'gemini' "$logfile" 2>/dev/null | tr -d '[:space:]' || echo 0)
+  GEMINI_NEW=$((GEMINI_NEW + GEMINI_COUNT))
 done
 
 # Calculate costs for new usage

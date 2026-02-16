@@ -1,49 +1,541 @@
 {
-  "refreshedAt": "2026-02-15T16:52:49Z",
-  "today": "2026-02-15",
-  "calendar": {"events":[]},
-  "gitActivity": [],
+  "refreshedAt": "2026-02-16T15:57:27Z",
+  "today": "2026-02-16",
+  "calendar": {"events": [
+  {
+    "id": "2ck0iifmmva19os5si17ocmahf_20260216T143000Z",
+    "summary": "Deep Learning ",
+    "start": "2026-02-16T07:30:00-07:00",
+    "end": "2026-02-16T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MmNrMGlpZm1tdmExOW9zNXNpMTdvY21haGZfMjAyNjAyMTZUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "6ag0d9bt71omv8io2ksjl94uk6_20260217T003000Z",
+    "summary": "498 Capstone Huddle",
+    "start": "2026-02-16T17:30:00-07:00",
+    "end": "2026-02-16T18:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [
+      {
+        "email": "tylerdial1818@gmail.com",
+        "self": true,
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tylerdial2026@u.northwestern.edu",
+        "organizer": true,
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde@gmail.com",
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde2025@u.northwestern.edu",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "html_link": "https://www.google.com/calendar/event?eid=NmFnMGQ5YnQ3MW9tdjhpbzJrc2psOTR1azZfMjAyNjAyMTdUMDAzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "4np69rqrv141ql8ue7qthruqpl_20260217T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-17T07:00:00-07:00",
+    "end": "2026-02-17T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NG5wNjlycXJ2MTQxcWw4dWU3cXRocnVxcGxfMjAyNjAyMTdUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "33f6acv6mkniq55qh8s289pbsr_20260217T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-17T07:30:00-07:00",
+    "end": "2026-02-17T08:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MzNmNmFjdjZta25pcTU1cWg4czI4OXBic3JfMjAyNjAyMTdUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "5fkf93k83tf3gs4lvkd05052kg_20260218T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-18T07:00:00-07:00",
+    "end": "2026-02-18T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NWZrZjkzazgzdGYzZ3M0bHZrZDA1MDUya2dfMjAyNjAyMThUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "606nd4eflj6115mrubn2t7hf7r_20260218T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-18T07:30:00-07:00",
+    "end": "2026-02-18T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NjA2bmQ0ZWZsajYxMTVtcnVibjJ0N2hmN3JfMjAyNjAyMThUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "3qtpi89g0emsl9q48mjp86ki5l_20260219T010000Z",
+    "summary": "498 Capstone Huddle",
+    "start": "2026-02-18T18:00:00-07:00",
+    "end": "2026-02-18T19:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [
+      {
+        "email": "tylerdial1818@gmail.com",
+        "self": true,
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tylerdial2026@u.northwestern.edu",
+        "organizer": true,
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde@gmail.com",
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde2025@u.northwestern.edu",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "html_link": "https://www.google.com/calendar/event?eid=M3F0cGk4OWcwZW1zbDlxNDhtanA4NmtpNWxfMjAyNjAyMTlUMDEwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "4p5q9k7crlq0a77igq9mfsv936_20260219T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-19T07:00:00-07:00",
+    "end": "2026-02-19T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NHA1cTlrN2NybHEwYTc3aWdxOW1mc3Y5MzZfMjAyNjAyMTlUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "1akuc0f4c8iptmmghddtk84cev_20260219T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-19T07:30:00-07:00",
+    "end": "2026-02-19T08:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MWFrdWMwZjRjOGlwdG1tZ2hkZHRrODRjZXZfMjAyNjAyMTlUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "f6j4ibcc7io68ihl1lt5e8t988_20260219T160000Z",
+    "summary": "Lori Lund EMDR Therapy",
+    "start": "2026-02-19T09:00:00-07:00",
+    "end": "2026-02-19T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=ZjZqNGliY2M3aW82OGlobDFsdDVlOHQ5ODhfMjAyNjAyMTlUMTYwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "4v01dhulcc32iiqjmh08m48716_20260220T000000Z",
+    "summary": "Amex Payment Due",
+    "start": "2026-02-19T17:00:00-07:00",
+    "end": "2026-02-19T17:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NHYwMWRodWxjYzMyaWlxam1oMDhtNDg3MTZfMjAyNjAyMjBUMDAwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "7uildlckj4kb7knvaue9agu017_20260220T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-20T07:00:00-07:00",
+    "end": "2026-02-20T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=N3VpbGRsY2tqNGtiN2tudmF1ZTlhZ3UwMTdfMjAyNjAyMjBUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "1h9ndcuoudplfhti36l1enbr0q_20260220T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-20T07:30:00-07:00",
+    "end": "2026-02-20T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MWg5bmRjdW91ZHBsZmh0aTM2bDFlbmJyMHFfMjAyNjAyMjBUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "6rei0dgtkoq9gg4jitb8a9p1pl_20260220T230000Z",
+    "summary": "498 Capstone Huddle",
+    "start": "2026-02-20T16:00:00-07:00",
+    "end": "2026-02-20T17:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [
+      {
+        "email": "tylerdial1818@gmail.com",
+        "self": true,
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tylerdial2026@u.northwestern.edu",
+        "organizer": true,
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde@gmail.com",
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tejaswigorde2025@u.northwestern.edu",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "html_link": "https://www.google.com/calendar/event?eid=NnJlaTBkZ3Rrb3E5Z2c0aml0YjhhOXAxcGxfMjAyNjAyMjBUMjMwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "6g9tu8pea9pe8hi0n2gd2csl6c_20260222T170000Z",
+    "summary": "Weekly Planning",
+    "start": "2026-02-22T10:00:00-07:00",
+    "end": "2026-02-22T12:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": "Personal planning for weekly, medium-term, and long term goals.",
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=Nmc5dHU4cGVhOXBlOGhpMG4yZ2QyY3NsNmNfMjAyNjAyMjJUMTcwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "0vqofq4et9eji8ou3oao9b6mon_20260223T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-23T07:00:00-07:00",
+    "end": "2026-02-23T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MHZxb2ZxNGV0OWVqaThvdTNvYW85YjZtb25fMjAyNjAyMjNUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "2ck0iifmmva19os5si17ocmahf_20260223T143000Z",
+    "summary": "Deep Learning ",
+    "start": "2026-02-23T07:30:00-07:00",
+    "end": "2026-02-23T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MmNrMGlpZm1tdmExOW9zNXNpMTdvY21haGZfMjAyNjAyMjNUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "6ag0d9bt71omv8io2ksjl94uk6_20260224T003000Z",
+    "summary": "498 Capstone Huddle",
+    "start": "2026-02-23T17:30:00-07:00",
+    "end": "2026-02-23T18:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [
+      {
+        "email": "tylerdial1818@gmail.com",
+        "self": true,
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tylerdial2026@u.northwestern.edu",
+        "organizer": true,
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde@gmail.com",
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde2025@u.northwestern.edu",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "html_link": "https://www.google.com/calendar/event?eid=NmFnMGQ5YnQ3MW9tdjhpbzJrc2psOTR1azZfMjAyNjAyMjRUMDAzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "4np69rqrv141ql8ue7qthruqpl_20260224T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-24T07:00:00-07:00",
+    "end": "2026-02-24T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NG5wNjlycXJ2MTQxcWw4dWU3cXRocnVxcGxfMjAyNjAyMjRUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "33f6acv6mkniq55qh8s289pbsr_20260224T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-24T07:30:00-07:00",
+    "end": "2026-02-24T08:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MzNmNmFjdjZta25pcTU1cWg4czI4OXBic3JfMjAyNjAyMjRUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "5fkf93k83tf3gs4lvkd05052kg_20260225T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-25T07:00:00-07:00",
+    "end": "2026-02-25T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NWZrZjkzazgzdGYzZ3M0bHZrZDA1MDUya2dfMjAyNjAyMjVUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "606nd4eflj6115mrubn2t7hf7r_20260225T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-25T07:30:00-07:00",
+    "end": "2026-02-25T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NjA2bmQ0ZWZsajYxMTVtcnVibjJ0N2hmN3JfMjAyNjAyMjVUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "3qtpi89g0emsl9q48mjp86ki5l_20260226T010000Z",
+    "summary": "498 Capstone Huddle",
+    "start": "2026-02-25T18:00:00-07:00",
+    "end": "2026-02-25T19:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [
+      {
+        "email": "tylerdial1818@gmail.com",
+        "self": true,
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tylerdial2026@u.northwestern.edu",
+        "organizer": true,
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde@gmail.com",
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde2025@u.northwestern.edu",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "html_link": "https://www.google.com/calendar/event?eid=M3F0cGk4OWcwZW1zbDlxNDhtanA4NmtpNWxfMjAyNjAyMjZUMDEwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "4p5q9k7crlq0a77igq9mfsv936_20260226T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-26T07:00:00-07:00",
+    "end": "2026-02-26T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NHA1cTlrN2NybHEwYTc3aWdxOW1mc3Y5MzZfMjAyNjAyMjZUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "1akuc0f4c8iptmmghddtk84cev_20260226T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-26T07:30:00-07:00",
+    "end": "2026-02-26T08:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MWFrdWMwZjRjOGlwdG1tZ2hkZHRrODRjZXZfMjAyNjAyMjZUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "f6j4ibcc7io68ihl1lt5e8t988_20260226T160000Z",
+    "summary": "Lori Lund EMDR Therapy",
+    "start": "2026-02-26T09:00:00-07:00",
+    "end": "2026-02-26T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=ZjZqNGliY2M3aW82OGlobDFsdDVlOHQ5ODhfMjAyNjAyMjZUMTYwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "7uildlckj4kb7knvaue9agu017_20260227T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-02-27T07:00:00-07:00",
+    "end": "2026-02-27T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=N3VpbGRsY2tqNGtiN2tudmF1ZTlhZ3UwMTdfMjAyNjAyMjdUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "1h9ndcuoudplfhti36l1enbr0q_20260227T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-02-27T07:30:00-07:00",
+    "end": "2026-02-27T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MWg5bmRjdW91ZHBsZmh0aTM2bDFlbmJyMHFfMjAyNjAyMjdUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "6rei0dgtkoq9gg4jitb8a9p1pl_20260227T230000Z",
+    "summary": "498 Capstone Huddle",
+    "start": "2026-02-27T16:00:00-07:00",
+    "end": "2026-02-27T17:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [
+      {
+        "email": "tylerdial1818@gmail.com",
+        "self": true,
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tylerdial2026@u.northwestern.edu",
+        "organizer": true,
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde@gmail.com",
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tejaswigorde2025@u.northwestern.edu",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "html_link": "https://www.google.com/calendar/event?eid=NnJlaTBkZ3Rrb3E5Z2c0aml0YjhhOXAxcGxfMjAyNjAyMjdUMjMwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "6g9tu8pea9pe8hi0n2gd2csl6c_20260301T170000Z",
+    "summary": "Weekly Planning",
+    "start": "2026-03-01T10:00:00-07:00",
+    "end": "2026-03-01T12:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": "Personal planning for weekly, medium-term, and long term goals.",
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=Nmc5dHU4cGVhOXBlOGhpMG4yZ2QyY3NsNmNfMjAyNjAzMDFUMTcwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "0vqofq4et9eji8ou3oao9b6mon_20260302T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-03-02T07:00:00-07:00",
+    "end": "2026-03-02T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MHZxb2ZxNGV0OWVqaThvdTNvYW85YjZtb25fMjAyNjAzMDJUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "2ck0iifmmva19os5si17ocmahf_20260302T143000Z",
+    "summary": "Deep Learning ",
+    "start": "2026-03-02T07:30:00-07:00",
+    "end": "2026-03-02T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MmNrMGlpZm1tdmExOW9zNXNpMTdvY21haGZfMjAyNjAzMDJUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  }
+]},
+  "gitActivity": [
+  {
+    "hash": "bbd89d1",
+    "message": "Switch Mission Control to Python calendar API",
+    "author": "Eve Green",
+    "date": "2026-02-15T10:17:41-07:00"
+  },
+  {
+    "hash": "0761cea",
+    "message": "Update MEMORY.md with workspace optimization learnings",
+    "author": "Eve Green",
+    "date": "2026-02-15T10:12:23-07:00"
+  },
+  {
+    "hash": "6cd1ac7",
+    "message": "Phase 2: Smarter workflows and memory architecture",
+    "author": "Eve Green",
+    "date": "2026-02-15T10:11:51-07:00"
+  },
+  {
+    "hash": "aa43b5a",
+    "message": "Reorganize workspace: consolidate content, docs, projects into subdirectories",
+    "author": "Eve Green",
+    "date": "2026-02-15T10:10:48-07:00"
+  }
+],
   "modelUsage": {
   "byModel": [
   {
     "model": "opus",
-    "count": 1992,
-    "cost": 373.5
+    "count": 2008,
+    "cost": 376.5
   },
   {
     "model": "sonnet",
-    "count": 94336,
-    "cost": 3537.587499999999
+    "count": 95374,
+    "cost": 3576.5124999999994
   },
   {
     "model": "haiku",
-    "count": 35456,
-    "cost": 354.54999999999995
+    "count": 35916,
+    "cost": 359.15
   },
   {
     "model": "minimax",
-    "count": 7728,
-    "cost": 15.04919999999992
+    "count": 7792,
+    "cost": 15.173999999999921
   },
   {
     "model": "deepseek",
-    "count": 4738,
-    "cost": 14.181200000000054
+    "count": 4776,
+    "cost": 14.295000000000055
   },
   {
     "model": "kimi",
-    "count": 3491,
-    "cost": 6.790400000000028
+    "count": 3519,
+    "cost": 6.845000000000029
   },
   {
     "model": "gemini",
-    "count": 249,
+    "count": 251,
     "cost": 0
   }
 ],
   "dailyCounts": [
   {
-    "date": "2026-02-14",
+    "date": "2026-02-16",
     "sessions": 1
   },
   {
@@ -59,7 +551,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4301.658299999998
+  "totalCost": 4348.4765
 },
   "tasks": {
   "tasks": [
