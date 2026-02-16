@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-16T15:57:27Z",
+  "refreshedAt": "2026-02-16T16:42:01Z",
   "today": "2026-02-16",
   "calendar": {"events": [
   {
@@ -467,6 +467,17 @@
     "description": null,
     "attendees": [],
     "html_link": "https://www.google.com/calendar/event?eid=MmNrMGlpZm1tdmExOW9zNXNpMTdvY21haGZfMjAyNjAzMDJUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "36c9l36iradrnborfuvc0fkerp_20260302T160000Z",
+    "summary": "PAY RENT",
+    "start": "2026-03-02T09:00:00-07:00",
+    "end": "2026-03-02T09:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MzZjOWwzNmlyYWRybmJvcmZ1dmMwZmtlcnBfMjAyNjAzMDJUMTYwMDAwWiB0eWxlcmRpYWwxODE4QG0"
   }
 ]},
   "gitActivity": [
@@ -504,18 +515,18 @@
   },
   {
     "model": "sonnet",
-    "count": 95374,
-    "cost": 3576.5124999999994
+    "count": 95392,
+    "cost": 3577.1874999999995
   },
   {
     "model": "haiku",
-    "count": 35916,
-    "cost": 359.15
+    "count": 35917,
+    "cost": 359.15999999999997
   },
   {
     "model": "minimax",
-    "count": 7792,
-    "cost": 15.173999999999921
+    "count": 7793,
+    "cost": 15.17589999999992
   },
   {
     "model": "deepseek",
@@ -551,7 +562,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4348.4765
+  "totalCost": 4349.1634
 },
   "tasks": {
   "tasks": [
@@ -605,18 +616,6 @@
       "completed": false
     },
     {
-      "id": "5",
-      "title": "Do 442 Assignment 1",
-      "description": "Complete first assignment for course 442",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "education",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T03:35:17Z",
-      "completed": false
-    },
-    {
       "id": "6",
       "title": "Create v1 of DialedIntelligence.com website build",
       "description": "Build first version of company website",
@@ -628,18 +627,6 @@
       "createdAt": "2026-02-10T03:35:17Z",
       "completed": true,
       "completedAt": "2026-02-10T05:03:49Z"
-    },
-    {
-      "id": "7",
-      "title": "Exercise 20 minutes",
-      "description": "Daily exercise routine",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "health",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T03:35:17Z",
-      "completed": false
     },
     {
       "id": "8",
@@ -668,78 +655,6 @@
       "completedAt": "2026-02-10T05:43:46Z"
     },
     {
-      "id": "10",
-      "title": "Deep Learning (1.5 hrs minimum)",
-      "description": "Daily deep learning study",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "11",
-      "title": "Exercise",
-      "description": "Daily exercise routine",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "health",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "12",
-      "title": "Journal",
-      "description": "Daily journaling",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "13",
-      "title": "Do Assignment 1",
-      "description": "AI Agents course assignment",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "education",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "14",
-      "title": "Do Final Project Phase 1",
-      "description": "AI Agents final project",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "15",
-      "title": "Go through a product management exercise for Churn App",
-      "description": "Product management for Churn App",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "health",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
       "id": "16",
       "title": "Figure out UI/Design Inspiration for the Churn App (Vercel/Palantir?)",
       "description": "Research UI design inspiration",
@@ -752,83 +667,11 @@
       "completed": false
     },
     {
-      "id": "17",
-      "title": "Code the first version of the front end with the 3 pages Tej and I talked about",
-      "description": "Build Churn App frontend",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "development",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "18",
-      "title": "Register for all the necessary data sources",
-      "description": "Socio Lead Intelligence data sources",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "19",
-      "title": "Go through product management exercise for spec design",
-      "description": "Socio Lead Intelligence product spec",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "health",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "20",
-      "title": "Figure out inspiration and structure",
-      "description": "Socio Lead Intelligence design structure",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "21",
-      "title": "Get API key/approval from Ben & Lance",
-      "description": "Socio Lead Intelligence API approval",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
       "id": "22",
       "title": "Build v1 of the app",
       "description": "Socio Lead Intelligence v1 build",
       "assignedTo": "Eve",
       "priority": "high",
-      "category": "development",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "23",
-      "title": "Finish Portfolio Website Homepage (when I get pictures)?",
-      "description": "Complete homepage with photos",
-      "assignedTo": "Tyler",
-      "priority": "medium",
       "category": "development",
       "status": "todo",
       "dueDate": "",
@@ -860,54 +703,6 @@
       "completed": false
     },
     {
-      "id": "26",
-      "title": "Review and Publish Professional Blog Posts & Corresponding LinkedIn Posts",
-      "description": "Review and publish blog content",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "content",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "27",
-      "title": "Finish and Fix Housing Pulse, prepare LinkedIn and blog post",
-      "description": "Complete Housing Pulse project",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "content",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "28",
-      "title": "Finish and Fix Clustering-Sandbox, prepare LinkedIn and blog post",
-      "description": "Complete Clustering-Sandbox project",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "content",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "29",
-      "title": "Finish and Fix Social Impact Chatbot, prepare LinkedIn and blog post",
-      "description": "Complete Social Impact Chatbot project",
-      "assignedTo": "Tyler",
-      "priority": "medium",
-      "category": "content",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
       "id": "30",
       "title": "Start executing other projects on the list",
       "description": "Execute additional portfolio projects",
@@ -925,18 +720,6 @@
       "description": "Build Dialed Intelligence website",
       "assignedTo": "Eve",
       "priority": "high",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "",
-      "createdAt": "2026-02-10T06:53:47Z",
-      "completed": false
-    },
-    {
-      "id": "32",
-      "title": "Setup Dialed Intelligence LinkedIn",
-      "description": "Create Dialed Intelligence LinkedIn presence",
-      "assignedTo": "Tyler",
-      "priority": "medium",
       "category": "general",
       "status": "todo",
       "dueDate": "",
@@ -990,21 +773,9 @@
       "dueDate": "",
       "createdAt": "2026-02-10T06:59:05Z",
       "completed": false
-    },
-    {
-      "id": "37",
-      "title": "Weekly planning",
-      "description": "Weekly planning session",
-      "assignedTo": "Tyler",
-      "priority": "high",
-      "category": "general",
-      "status": "todo",
-      "dueDate": "2026-02-10",
-      "createdAt": "2026-02-10T07:10:09Z",
-      "completed": false
     }
   ],
-  "lastUpdated": "2026-02-10T07:10:09Z"
+  "lastUpdated": "2026-02-16T15:01:00Z"
 },
   "weather": null
 }
