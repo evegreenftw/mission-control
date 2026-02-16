@@ -252,19 +252,21 @@ async function loadFullConversation(idx, containerEl) {
     const result = window.searchResults[idx];
     
     try {
-        // Load the full conversation from conversations.json
-        const response = await fetch('conversations.json?t=' + Date.now());
-        const data = await response.json();
+        // Call the API to get the full conversation
+        const response = await fetch(`http://localhost:3001/conversation/${result.sessionId}`);
         
-        // Find the matching conversation by sessionId
-        const conversation = data.conversations.find(c => c.sessionId === result.sessionId);
+        if (!response.ok) {
+            throw new Error(`Failed to load conversation: ${response.status}`);
+        }
         
-        if (conversation && conversation.messages) {
+        const conversation = await response.json();
+        
+        if (conversation && conversation.messages && conversation.messages.length > 0) {
             containerEl.innerHTML = renderConversationMessages(conversation.messages);
         } else {
             containerEl.innerHTML = `
                 <div style="padding: 20px; text-align: center; color: var(--text-muted);">
-                    <p>Full conversation not available</p>
+                    <p>No messages in this conversation</p>
                 </div>
             `;
         }
@@ -273,6 +275,7 @@ async function loadFullConversation(idx, containerEl) {
         containerEl.innerHTML = `
             <div style="padding: 20px; text-align: center; color: var(--error);">
                 <p>Error loading conversation</p>
+                <p style="font-size: 0.9em; margin-top: 8px;">${error.message}</p>
             </div>
         `;
     }
