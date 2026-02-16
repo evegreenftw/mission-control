@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-16T21:30:43Z",
+  "refreshedAt": "2026-02-16T22:45:58Z",
   "today": "2026-02-16",
   "calendar": {"events": [
   {
@@ -504,18 +504,18 @@
   },
   {
     "model": "sonnet",
-    "count": 95539,
-    "cost": 3582.6999999999994
+    "count": 95602,
+    "cost": 3585.062499999999
   },
   {
     "model": "haiku",
-    "count": 35941,
-    "cost": 359.3999999999999
+    "count": 35955,
+    "cost": 359.5399999999999
   },
   {
     "model": "minimax",
-    "count": 7799,
-    "cost": 15.187299999999915
+    "count": 7801,
+    "cost": 15.191099999999913
   },
   {
     "model": "deepseek",
@@ -551,7 +551,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4354.927299999999
+  "totalCost": 4357.433599999999
 },
   "tasks": {
   "tasks": [
