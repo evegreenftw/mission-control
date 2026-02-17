@@ -1,6 +1,6 @@
 {
-  "refreshedAt": "2026-02-17T05:53:13Z",
-  "today": "2026-02-16",
+  "refreshedAt": "2026-02-17T13:53:11Z",
+  "today": "2026-02-17",
   "calendar": {"events": [
   {
     "id": "4np69rqrv141ql8ue7qthruqpl_20260217T140000Z",
@@ -482,6 +482,12 @@
 ]},
   "gitActivity": [
   {
+    "hash": "1e346ff",
+    "message": "End of day: memory, heartbeat state, mission control updates (Feb 16)",
+    "author": "Eve Green",
+    "date": "2026-02-16T22:56:35-07:00"
+  },
+  {
     "hash": "34ca41c",
     "message": "Fix heartbeat: repair JSON generation bug and silence all output",
     "author": "Eve Green",
@@ -521,18 +527,18 @@
   },
   {
     "model": "sonnet",
-    "count": 96253,
-    "cost": 3609.474999999999
+    "count": 96601,
+    "cost": 3622.5249999999987
   },
   {
     "model": "haiku",
-    "count": 36129,
-    "cost": 361.2799999999998
+    "count": 36272,
+    "cost": 362.7099999999998
   },
   {
     "model": "minimax",
-    "count": 7818,
-    "cost": 15.223399999999899
+    "count": 7825,
+    "cost": 15.236699999999892
   },
   {
     "model": "deepseek",
@@ -552,23 +558,19 @@
 ],
   "dailyCounts": [
   {
-    "date": "2026-02-16",
+    "date": "2026-02-17",
     "sessions": 1
   },
   {
-    "date": "2026-02-15",
+    "date": "2026-02-16",
     "sessions": 1
   },
   {
     "date": "2026-02-06",
     "sessions": 1
-  },
-  {
-    "date": "2026-02-07",
-    "sessions": 1
   }
 ],
-  "totalCost": 4383.618399999999
+  "totalCost": 4398.111699999999
 },
   "tasks": {
   "tasks": [
