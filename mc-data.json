@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-17T00:29:37Z",
+  "refreshedAt": "2026-02-17T00:30:43Z",
   "today": "2026-02-16",
   "calendar": {"events": [
   {
@@ -478,9 +478,45 @@
     "description": null,
     "attendees": [],
     "html_link": "https://www.google.com/calendar/event?eid=XzZjc2s0Y2kxOG9vM2liOXA2OHAzMmI5azc0b2s2YjlwNmQyajZiOWg2Z29qY2UyMzZvcWs4aGE2NmdfMjAyNjAzMDNUMDAwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "6ag0d9bt71omv8io2ksjl94uk6_20260303T003000Z",
+    "summary": "498 Capstone Huddle",
+    "start": "2026-03-02T17:30:00-07:00",
+    "end": "2026-03-02T18:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [
+      {
+        "email": "tylerdial1818@gmail.com",
+        "self": true,
+        "responseStatus": "needsAction"
+      },
+      {
+        "email": "tylerdial2026@u.northwestern.edu",
+        "organizer": true,
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde@gmail.com",
+        "responseStatus": "accepted"
+      },
+      {
+        "email": "tejaswigorde2025@u.northwestern.edu",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "html_link": "https://www.google.com/calendar/event?eid=NmFnMGQ5YnQ3MW9tdjhpbzJrc2psOTR1azZfMjAyNjAzMDNUMDAzMDAwWiB0eWxlcmRpYWwxODE4QG0"
   }
 ]},
   "gitActivity": [
+  {
+    "hash": "34ca41c",
+    "message": "Fix heartbeat: repair JSON generation bug and silence all output",
+    "author": "Eve Green",
+    "date": "2026-02-16T17:29:51-07:00"
+  },
   {
     "hash": "bbd89d1",
     "message": "Switch Mission Control to Python calendar API",
@@ -515,18 +551,18 @@
   },
   {
     "model": "sonnet",
-    "count": 95779,
-    "cost": 3591.699999999999
+    "count": 95815,
+    "cost": 3593.049999999999
   },
   {
     "model": "haiku",
-    "count": 35995,
-    "cost": 359.9399999999998
+    "count": 36004,
+    "cost": 360.0299999999998
   },
   {
     "model": "minimax",
-    "count": 7806,
-    "cost": 15.200599999999909
+    "count": 7807,
+    "cost": 15.202499999999908
   },
   {
     "model": "deepseek",
@@ -562,7 +598,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4364.480599999999
+  "totalCost": 4365.9225
 },
   "tasks": {
   "tasks": [
