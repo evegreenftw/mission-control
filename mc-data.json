@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-16T23:45:50Z",
+  "refreshedAt": "2026-02-17T00:29:37Z",
   "today": "2026-02-16",
   "calendar": {"events": [
   {
@@ -467,6 +467,17 @@
     "description": null,
     "attendees": [],
     "html_link": "https://www.google.com/calendar/event?eid=MzZjOWwzNmlyYWRybmJvcmZ1dmMwZmtlcnBfMjAyNjAzMDJUMTYwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "_6csk4ci18oo3ib9p68p32b9k74ok6b9p6d2j6b9h6gojce236oqk8ha66g_20260303T000000Z",
+    "summary": "NO REALLY PAY RENT",
+    "start": "2026-03-02T17:00:00-07:00",
+    "end": "2026-03-02T17:15:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=XzZjc2s0Y2kxOG9vM2liOXA2OHAzMmI5azc0b2s2YjlwNmQyajZiOWg2Z29qY2UyMzZvcWs4aGE2NmdfMjAyNjAzMDNUMDAwMDAwWiB0eWxlcmRpYWwxODE4QG0"
   }
 ]},
   "gitActivity": [
@@ -504,18 +515,18 @@
   },
   {
     "model": "sonnet",
-    "count": 95671,
-    "cost": 3587.649999999999
+    "count": 95779,
+    "cost": 3591.699999999999
   },
   {
     "model": "haiku",
-    "count": 35971,
-    "cost": 359.6999999999999
+    "count": 35995,
+    "cost": 359.9399999999998
   },
   {
     "model": "minimax",
-    "count": 7803,
-    "cost": 15.194899999999912
+    "count": 7806,
+    "cost": 15.200599999999909
   },
   {
     "model": "deepseek",
@@ -551,7 +562,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4360.184899999999
+  "totalCost": 4364.480599999999
 },
   "tasks": {
   "tasks": [
