@@ -1,29 +1,7 @@
 {
-  "refreshedAt": "2026-02-17T13:53:11Z",
+  "refreshedAt": "2026-02-17T15:53:13Z",
   "today": "2026-02-17",
   "calendar": {"events": [
-  {
-    "id": "4np69rqrv141ql8ue7qthruqpl_20260217T140000Z",
-    "summary": "Morning Routine",
-    "start": "2026-02-17T07:00:00-07:00",
-    "end": "2026-02-17T07:30:00-07:00",
-    "all_day": false,
-    "location": null,
-    "description": null,
-    "attendees": [],
-    "html_link": "https://www.google.com/calendar/event?eid=NG5wNjlycXJ2MTQxcWw4dWU3cXRocnVxcGxfMjAyNjAyMTdUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
-  },
-  {
-    "id": "33f6acv6mkniq55qh8s289pbsr_20260217T143000Z",
-    "summary": "Deep Learning",
-    "start": "2026-02-17T07:30:00-07:00",
-    "end": "2026-02-17T08:30:00-07:00",
-    "all_day": false,
-    "location": null,
-    "description": null,
-    "attendees": [],
-    "html_link": "https://www.google.com/calendar/event?eid=MzNmNmFjdjZta25pcTU1cWg4czI4OXBic3JfMjAyNjAyMTdUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
-  },
   {
     "id": "5fkf93k83tf3gs4lvkd05052kg_20260218T140000Z",
     "summary": "Morning Routine",
@@ -478,6 +456,28 @@
       }
     ],
     "html_link": "https://www.google.com/calendar/event?eid=NmFnMGQ5YnQ3MW9tdjhpbzJrc2psOTR1azZfMjAyNjAzMDNUMDAzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "4np69rqrv141ql8ue7qthruqpl_20260303T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-03-03T07:00:00-07:00",
+    "end": "2026-03-03T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NG5wNjlycXJ2MTQxcWw4dWU3cXRocnVxcGxfMjAyNjAzMDNUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "33f6acv6mkniq55qh8s289pbsr_20260303T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-03-03T07:30:00-07:00",
+    "end": "2026-03-03T08:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=MzNmNmFjdjZta25pcTU1cWg4czI4OXBic3JfMjAyNjAzMDNUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
   }
 ]},
   "gitActivity": [
@@ -527,18 +527,18 @@
   },
   {
     "model": "sonnet",
-    "count": 96601,
-    "cost": 3622.5249999999987
+    "count": 96763,
+    "cost": 3628.599999999999
   },
   {
     "model": "haiku",
-    "count": 36272,
-    "cost": 362.7099999999998
+    "count": 36343,
+    "cost": 363.41999999999985
   },
   {
     "model": "minimax",
-    "count": 7825,
-    "cost": 15.236699999999892
+    "count": 7830,
+    "cost": 15.246399999999891
   },
   {
     "model": "deepseek",
@@ -570,7 +570,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4398.111699999999
+  "totalCost": 4404.906399999999
 },
   "tasks": {
   "tasks": [
