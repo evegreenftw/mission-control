@@ -1,5 +1,5 @@
 {
-  "refreshedAt": "2026-02-17T16:53:12Z",
+  "refreshedAt": "2026-02-17T18:53:10Z",
   "today": "2026-02-17",
   "calendar": {"events": [
   {
@@ -141,7 +141,7 @@
       },
       {
         "email": "tejaswigorde@gmail.com",
-        "responseStatus": "needsAction"
+        "responseStatus": "accepted"
       },
       {
         "email": "tejaswigorde2025@u.northwestern.edu",
@@ -363,7 +363,7 @@
       },
       {
         "email": "tejaswigorde@gmail.com",
-        "responseStatus": "needsAction"
+        "responseStatus": "accepted"
       },
       {
         "email": "tejaswigorde2025@u.northwestern.edu",
@@ -527,18 +527,18 @@
   },
   {
     "model": "sonnet",
-    "count": 96874,
-    "cost": 3632.762499999999
+    "count": 96989,
+    "cost": 3637.074999999999
   },
   {
     "model": "haiku",
-    "count": 36393,
-    "cost": 363.91999999999985
+    "count": 36447,
+    "cost": 364.4599999999998
   },
   {
     "model": "minimax",
-    "count": 7833,
-    "cost": 15.25219999999989
+    "count": 7835,
+    "cost": 15.255999999999888
   },
   {
     "model": "deepseek",
@@ -570,7 +570,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4409.574699999999
+  "totalCost": 4414.431
 },
   "tasks": {
   "tasks": [
