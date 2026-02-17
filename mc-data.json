@@ -1,37 +1,7 @@
 {
-  "refreshedAt": "2026-02-17T00:53:16Z",
+  "refreshedAt": "2026-02-17T01:53:15Z",
   "today": "2026-02-16",
   "calendar": {"events": [
-  {
-    "id": "6ag0d9bt71omv8io2ksjl94uk6_20260217T003000Z",
-    "summary": "498 Capstone Huddle",
-    "start": "2026-02-16T17:30:00-07:00",
-    "end": "2026-02-16T18:30:00-07:00",
-    "all_day": false,
-    "location": null,
-    "description": null,
-    "attendees": [
-      {
-        "email": "tylerdial1818@gmail.com",
-        "self": true,
-        "responseStatus": "needsAction"
-      },
-      {
-        "email": "tylerdial2026@u.northwestern.edu",
-        "organizer": true,
-        "responseStatus": "accepted"
-      },
-      {
-        "email": "tejaswigorde@gmail.com",
-        "responseStatus": "accepted"
-      },
-      {
-        "email": "tejaswigorde2025@u.northwestern.edu",
-        "responseStatus": "needsAction"
-      }
-    ],
-    "html_link": "https://www.google.com/calendar/event?eid=NmFnMGQ5YnQ3MW9tdjhpbzJrc2psOTR1azZfMjAyNjAyMTdUMDAzMDAwWiB0eWxlcmRpYWwxODE4QG0"
-  },
   {
     "id": "4np69rqrv141ql8ue7qthruqpl_20260217T140000Z",
     "summary": "Morning Routine",
@@ -551,18 +521,18 @@
   },
   {
     "model": "sonnet",
-    "count": 95890,
-    "cost": 3595.862499999999
+    "count": 95967,
+    "cost": 3598.749999999999
   },
   {
     "model": "haiku",
-    "count": 36022,
-    "cost": 360.20999999999975
+    "count": 36042,
+    "cost": 360.4099999999998
   },
   {
     "model": "minimax",
-    "count": 7809,
-    "cost": 15.206299999999906
+    "count": 7811,
+    "cost": 15.210099999999905
   },
   {
     "model": "deepseek",
@@ -598,7 +568,7 @@
     "sessions": 1
   }
 ],
-  "totalCost": 4368.918799999999
+  "totalCost": 4372.0100999999995
 },
   "tasks": {
   "tasks": [
