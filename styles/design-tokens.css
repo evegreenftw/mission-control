@@ -1,0 +1,140 @@
+/* ============================================
+   Mission Control v3.0 — Design Tokens
+   CSS variables only. No selectors except :root.
+   ============================================ */
+
+:root {
+  /* ---- Backgrounds ---- */
+  --bg-base:       #0a0a0f;
+  --bg-surface:    #12121a;
+  --bg-elevated:   #1a1a24;
+  --bg-overlay:    #22222e;
+  --bg-hover:      #2a2a38;
+  --bg-input:      #16161f;
+
+  /* ---- Borders ---- */
+  --border-default:  #1e1e2a;
+  --border-subtle:   #16161f;
+  --border-strong:   #2e2e3e;
+  --border-focus:    #635bff;
+
+  /* ---- Text ---- */
+  --text-primary:    #ffffff;
+  --text-secondary:  #a0a0b0;
+  --text-tertiary:   #6a6a7a;
+  --text-disabled:   #4a4a5a;
+  --text-inverse:    #0a0a0f;
+
+  /* ---- Accent Colors ---- */
+  --accent-purple:   #635bff;
+  --accent-cyan:     #00d4ff;
+  --accent-green:    #00d68f;
+  --accent-amber:    #ffb800;
+  --accent-red:      #ff6b6b;
+
+  /* ---- Accent Hover States ---- */
+  --accent-purple-hover:  #7c75ff;
+  --accent-cyan-hover:    #33ddff;
+  --accent-green-hover:   #33e0a8;
+  --accent-amber-hover:   #ffc733;
+  --accent-red-hover:     #ff8a8a;
+
+  /* ---- Accent Dimmed (backgrounds, badges) ---- */
+  --accent-purple-dim:  rgba(99, 91, 255, 0.12);
+  --accent-cyan-dim:    rgba(0, 212, 255, 0.12);
+  --accent-green-dim:   rgba(0, 214, 143, 0.12);
+  --accent-amber-dim:   rgba(255, 184, 0, 0.12);
+  --accent-red-dim:     rgba(255, 107, 107, 0.12);
+
+  /* ---- Semantic Colors ---- */
+  --color-success:     var(--accent-green);
+  --color-warning:     var(--accent-amber);
+  --color-danger:      var(--accent-red);
+  --color-info:        var(--accent-cyan);
+  --color-primary:     var(--accent-purple);
+
+  /* ---- Priority Colors ---- */
+  --priority-critical:  var(--accent-red);
+  --priority-high:      var(--accent-amber);
+  --priority-medium:    var(--accent-cyan);
+  --priority-low:       var(--accent-green);
+
+  /* ---- Status Colors ---- */
+  --status-connected:    var(--accent-green);
+  --status-stale:        var(--accent-amber);
+  --status-disconnected: var(--accent-red);
+  --status-loading:      var(--accent-cyan);
+
+  /* ---- Gradients ---- */
+  --gradient-brand:    linear-gradient(135deg, #635bff 0%, #00d4ff 50%, #00d68f 100%);
+  --gradient-purple:   linear-gradient(135deg, #635bff 0%, #8b5cf6 100%);
+  --gradient-surface:  linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-base) 100%);
+
+  /* ---- Typography ---- */
+  --font-sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:   'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  --text-xs:     0.6875rem;   /* 11px */
+  --text-sm:     0.75rem;     /* 12px */
+  --text-base:   0.875rem;    /* 14px */
+  --text-md:     1rem;        /* 16px */
+  --text-lg:     1.125rem;    /* 18px */
+  --text-xl:     1.375rem;    /* 22px */
+  --text-2xl:    1.75rem;     /* 28px */
+  --text-3xl:    2.25rem;     /* 36px */
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  --leading-tight:   1.25;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.75;
+
+  /* ---- Spacing (4px base) ---- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-7:  32px;
+  --sp-8:  40px;
+  --sp-9:  48px;
+  --sp-10: 64px;
+
+  /* ---- Border Radius ---- */
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-2xl:  16px;
+  --radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm:   0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md:   0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg:   0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(99, 91, 255, 0.15);
+
+  /* ---- Transitions ---- */
+  --transition-fast:   0.1s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow:   0.3s ease;
+
+  /* ---- Layout ---- */
+  --sidebar-width:  260px;
+  --header-height:  64px;
+  --modal-max-width: 560px;
+
+  /* ---- Z-Index Scale ---- */
+  --z-base:      1;
+  --z-dropdown:  100;
+  --z-sticky:    200;
+  --z-modal:     500;
+  --z-overlay:   600;
+  --z-toast:     700;
+  --z-password:  900;
+}

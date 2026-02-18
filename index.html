@@ -1,390 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission Control</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="kanban.css">
-    <link rel="stylesheet" href="conversations.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Control v3.0</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Styles (order: tokens → layout → components → view-specific) -->
+  <link rel="stylesheet" href="styles/design-tokens.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/views/kanban.css">
+  <link rel="stylesheet" href="styles/views/dashboard.css">
+  <link rel="stylesheet" href="styles/views/calendar.css">
+  <link rel="stylesheet" href="styles/views/spend.css">
+  <link rel="stylesheet" href="styles/views/agents.css">
+  <link rel="stylesheet" href="styles/views/second-brain.css">
 </head>
 <body>
-    <!-- Password Protection Overlay -->
-    <div id="password-overlay" class="password-overlay">
-        <div class="password-box">
-            <div class="password-logo">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <rect x="8" y="8" width="32" height="32" rx="8" stroke="url(#grad1)" stroke-width="2"/>
-                    <circle cx="24" cy="24" r="6" fill="url(#grad1)"/>
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#635bff;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            <h2>Mission Control</h2>
-            <p class="password-subtitle">Secure Access Required</p>
-            <div class="password-input-wrapper">
-                <svg class="password-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <rect x="3" y="8" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M6 8V6C6 3.79086 7.79086 2 10 2C12.2091 2 14 3.79086 14 6V8" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <input type="password" id="password-input" placeholder="Enter password" autocomplete="off">
-            </div>
-            <button onclick="checkPassword()" class="password-submit">
-                <span>Unlock</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-            <p id="password-error" class="password-error"></p>
-            <div class="password-footer">
-                <div class="password-footer-dot"></div>
-                <span>Tyler Dial · Dialed Intelligence</span>
-            </div>
+
+  <!-- ============ Password Gate ============ -->
+  <div class="password-overlay" id="passwordOverlay">
+    <div class="password-box">
+      <div class="password-brand">
+        <div class="password-brand-icon">MC</div>
+        <div class="password-brand-title">Mission Control</div>
+        <div class="password-brand-sub">v3.0 — Personal Command Center</div>
+      </div>
+      <div class="password-form">
+        <div class="password-input-wrap">
+          <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter password"
+            autocomplete="off"
+            spellcheck="false"
+          >
         </div>
+        <div class="password-error" id="passwordError"></div>
+      </div>
     </div>
+  </div>
 
-    <div class="app" style="display: none;" id="main-app">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h1 class="logo">Mission Control</h1>
-                <span class="version">v2.0</span>
-            </div>
-            <nav class="nav">
-                <a href="#" class="nav-item active" data-view="dashboard">
-                    <span class="nav-icon">◉</span>
-                    Dashboard
-                </a>
-                <a href="#" class="nav-item" data-view="calendar">
-                    <span class="nav-icon">◎</span>
-                    Calendar
-                </a>
-                <a href="#" class="nav-item" data-view="tasks">
-                    <span class="nav-icon">◈</span>
-                    Tasks
-                </a>
-                <a href="#" class="nav-item" data-view="spend">
-                    <span class="nav-icon">◇</span>
-                    Model Spend
-                </a>
-                <a href="#" class="nav-item" data-view="activity">
-                    <span class="nav-icon">◌</span>
-                    Activity
-                </a>
-                <a href="#" class="nav-item" data-view="conversations">
-                    <span class="nav-icon">◎</span>
-                    Conversations
-                </a>
-            </nav>
-            
-            <!-- Quick Actions -->
-            <div class="quick-actions">
-                <h4>Quick Actions</h4>
-                <button class="quick-btn" onclick="app.quickRefresh()">
-                    <span>⟳</span> Refresh Data
-                </button>
-                <button class="quick-btn" onclick="app.openAddModal('task')">
-                    <span>+</span> New Task
-                </button>
-                <button class="quick-btn" onclick="app.exportData()">
-                    <span>↓</span> Export
-                </button>
-            </div>
-            
-            <div class="sidebar-footer">
-                <div class="status-indicator">
-                    <span class="status-dot online" id="statusDot"></span>
-                    <span id="statusText">Eve Online</span>
-                </div>
-                <div class="weather-mini" id="weatherMini"></div>
-            </div>
-        </aside>
+  <!-- ============ App Shell ============ -->
+  <div class="app-shell" id="appShell">
 
-        <!-- Main Content -->
-        <main class="main">
-            <!-- Header -->
-            <header class="header">
-                <div class="header-left">
-                    <h2 class="page-title" id="pageTitle">Dashboard</h2>
-                    <span class="timestamp" id="timestamp"></span>
-                </div>
-                <div class="header-right">
-                    <div class="header-stats">
-                        <div class="header-stat">
-                            <span class="header-stat-value" id="headerSessions">0</span>
-                            <span class="header-stat-label">sessions today</span>
-                        </div>
-                        <div class="header-stat">
-                            <span class="header-stat-value" id="headerTasks">0</span>
-                            <span class="header-stat-label">active tasks</span>
-                        </div>
-                    </div>
-                    <button class="btn btn-secondary" id="syncBtn" onclick="app.sync()">
-                        <span class="sync-icon">⟳</span> Sync
-                    </button>
-                </div>
-            </header>
-
-            <!-- Content Area -->
-            <div class="content" id="content">
-                <!-- Dashboard View -->
-                <div class="view active" id="dashboardView">
-                    <!-- Stats Row -->
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon">📋</div>
-                            <div class="stat-content">
-                                <div class="stat-label">Active Tasks</div>
-                                <div class="stat-value" id="activeTasksCount">0</div>
-                            </div>
-                            <div class="sparkline" id="taskSparkline"></div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">🤖</div>
-                            <div class="stat-content">
-                                <div class="stat-label">Sessions Today</div>
-                                <div class="stat-value" id="sessionsToday">0</div>
-                            </div>
-                            <div class="sparkline" id="sessionSparkline"></div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">📅</div>
-                            <div class="stat-content">
-                                <div class="stat-label">Events Today</div>
-                                <div class="stat-value" id="eventsToday">0</div>
-                            </div>
-                            <div class="stat-trend" id="nextEvent">—</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">💻</div>
-                            <div class="stat-content">
-                                <div class="stat-label">Git Commits</div>
-                                <div class="stat-value" id="gitCommits">0</div>
-                            </div>
-                            <div class="stat-trend">this week</div>
-                        </div>
-                    </div>
-
-                    <!-- Calendar Panel -->
-                    <div class="panel full-width calendar-panel">
-                        <div class="panel-header">
-                            <h3>📅 Upcoming Events</h3>
-                            <div class="panel-actions">
-                                <button class="btn-tab active" data-cal-view="week">Week</button>
-                                <button class="btn-tab" data-cal-view="day">Today</button>
-                            </div>
-                        </div>
-                        <div class="panel-content calendar-grid" id="calendarEvents">
-                            <!-- Populated by JS -->
-                        </div>
-                        <div class="panel-footer">
-                            <span class="panel-subtitle" id="lastRefresh">Loading...</span>
-                        </div>
-                    </div>
-
-                    <!-- Two Column Layout -->
-                    <div class="dashboard-grid">
-                        <!-- Current Work -->
-                        <div class="panel">
-                            <div class="panel-header">
-                                <h3>🎯 Current Tasks</h3>
-                                <button class="btn-icon" onclick="app.switchView('tasks')">→</button>
-                            </div>
-                            <div class="panel-content task-list-compact" id="currentWorkList">
-                                <!-- Populated by JS -->
-                            </div>
-                        </div>
-
-                        <!-- Recent Activity -->
-                        <div class="panel">
-                            <div class="panel-header">
-                                <h3>⚡ Recent Activity</h3>
-                                <button class="btn-icon" onclick="app.switchView('activity')">→</button>
-                            </div>
-                            <div class="panel-content activity-list-compact" id="activityList">
-                                <!-- Populated by JS -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Model Usage Chart -->
-                    <div class="panel full-width">
-                        <div class="panel-header">
-                            <h3>🤖 Model Sessions (7 Days)</h3>
-                            <div class="panel-actions">
-                                <button class="btn-tab active" data-range="7d">7D</button>
-                                <button class="btn-tab" data-range="30d">30D</button>
-                            </div>
-                        </div>
-                        <div class="panel-content chart-wrapper">
-                            <canvas id="sessionsChart" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Calendar View -->
-                <div class="view" id="calendarView">
-                    <div class="view-controls">
-                        <div class="filter-group">
-                            <button class="filter-btn active" data-cal-filter="all">All Events</button>
-                            <button class="filter-btn" data-cal-filter="today">Today</button>
-                            <button class="filter-btn" data-cal-filter="week">This Week</button>
-                        </div>
-                    </div>
-                    <div class="calendar-full" id="calendarFull">
-                        <!-- Populated by JS -->
-                    </div>
-                </div>
-
-                <!-- Tasks View -->
-                <div class="view" id="tasksView">
-                    <div class="view-controls">
-                        <div class="filter-group">
-                            <button class="filter-btn active" data-filter="all">All</button>
-                            <button class="filter-btn" data-filter="active">Active</button>
-                            <button class="filter-btn" data-filter="completed">Completed</button>
-                        </div>
-                        <button class="btn btn-primary" onclick="app.openAddModal('task')">+ Add Task</button>
-                    </div>
-                    <div class="tasks-list" id="tasksList">
-                        <!-- Populated by JS -->
-                    </div>
-                </div>
-
-                <!-- Spend View -->
-                <div class="view" id="spendView">
-                    <div class="spend-overview">
-                        <div class="spend-card large">
-                            <div class="spend-header">
-                                <h3>Model Usage Overview</h3>
-                                <span class="spend-period">Last 7 Days</span>
-                            </div>
-                            <div class="spend-value" id="totalSessions">0 sessions</div>
-                        </div>
-                    </div>
-                    <div class="spend-details">
-                        <div class="panel">
-                            <div class="panel-header">
-                                <h3>Sessions by Model</h3>
-                            </div>
-                            <div class="panel-content chart-wrapper">
-                                <canvas id="modelPieChart" height="250"></canvas>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-header">
-                                <h3>Daily Sessions</h3>
-                            </div>
-                            <div class="panel-content chart-wrapper">
-                                <canvas id="dailySessionsChart" height="250"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel full-width">
-                        <div class="panel-header">
-                            <h3>Model Breakdown</h3>
-                        </div>
-                        <div class="panel-content">
-                            <div class="model-bars" id="modelBars">
-                                <!-- Populated by JS -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Activity View -->
-                <div class="view" id="activityView">
-                    <div class="view-controls">
-                        <div class="filter-group">
-                            <button class="filter-btn active" data-activity-filter="all">All</button>
-                            <button class="filter-btn" data-activity-filter="git">Git</button>
-                            <button class="filter-btn" data-activity-filter="tasks">Tasks</button>
-                        </div>
-                    </div>
-                    <div class="activity-timeline" id="activityTimeline">
-                        <!-- Populated by JS -->
-                    </div>
-                </div>
-
-                <!-- Conversations View -->
-                <div class="view" id="conversationsView">
-                    <!-- Populated by conversations-view.js -->
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal" id="modal">
-            <div class="modal-header">
-                <h3 id="modalTitle">Add New</h3>
-                <button class="modal-close" id="modalClose" onclick="app.closeModal()">×</button>
-            </div>
-            <div class="modal-content" id="modalContent">
-                <!-- Dynamic content -->
-            </div>
+    <!-- ---- Sidebar ---- -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-brand-icon">MC</div>
+        <div>
+          <div class="sidebar-brand-name">Mission Control</div>
+          <div class="sidebar-brand-version">v3.0</div>
         </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-label">Views</div>
+        <div class="sidebar-nav-item active" data-view="dashboard">
+          <span class="nav-icon">&#9635;</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge">1</span>
+        </div>
+        <div class="sidebar-nav-item" data-view="kanban">
+          <span class="nav-icon">&#9783;</span>
+          <span class="nav-label">Kanban</span>
+          <span class="nav-badge">2</span>
+        </div>
+        <div class="sidebar-nav-item" data-view="calendar">
+          <span class="nav-icon">&#9675;</span>
+          <span class="nav-label">Calendar</span>
+          <span class="nav-badge">3</span>
+        </div>
+        <div class="sidebar-nav-item" data-view="spend">
+          <span class="nav-icon">&#9651;</span>
+          <span class="nav-label">Spend</span>
+          <span class="nav-badge">4</span>
+        </div>
+        <div class="sidebar-nav-item" data-view="agents">
+          <span class="nav-icon">&#11043;</span>
+          <span class="nav-label">Agents</span>
+          <span class="nav-badge">5</span>
+        </div>
+        <div class="sidebar-nav-item" data-view="brain">
+          <span class="nav-icon">&#10686;</span>
+          <span class="nav-label">Second Brain</span>
+          <span class="nav-badge">6</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="sidebar-avatar">E</div>
+          <div>
+            <div class="sidebar-user-name">Eve</div>
+            <div class="sidebar-user-role">Operator</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- ---- Header ---- -->
+    <header class="header">
+      <div class="header-left">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle sidebar">&#9776;</button>
+        <div>
+          <div class="header-title" id="headerTitle">Dashboard</div>
+          <div class="header-subtitle" id="headerTimestamp"></div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-status-bar" id="statusBar">
+          <!-- Status indicators populated by status-bar.js (Prompt 2) -->
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-secondary btn-sm" id="syncBtn" onclick="app.refreshData()">
+            Sync
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ---- Main Content ---- -->
+    <main class="main-content" id="mainContent">
+
+      <!-- Dashboard View -->
+      <div class="view-container active" id="dashboardView">
+        <div class="empty-state">
+          <div class="empty-state-icon">&#9635;</div>
+          <div class="empty-state-title">Dashboard</div>
+          <div class="empty-state-message">Loading dashboard data...</div>
+          <div style="margin-top: var(--sp-4); display: flex; flex-direction: column; gap: var(--sp-3); width: 100%; max-width: 400px;">
+            <div class="loading-skeleton skeleton-heading"></div>
+            <div class="loading-skeleton skeleton-card"></div>
+            <div class="loading-skeleton skeleton-card"></div>
+            <div class="loading-skeleton skeleton-text medium"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kanban View -->
+      <div class="view-container" id="kanbanView">
+        <div class="empty-state">
+          <div class="empty-state-icon">&#9783;</div>
+          <div class="empty-state-title">Kanban Board</div>
+          <div class="empty-state-message">Loading tasks...</div>
+          <div style="margin-top: var(--sp-4); display: flex; gap: var(--sp-3); width: 100%; max-width: 600px;">
+            <div class="loading-skeleton skeleton-card" style="flex:1;"></div>
+            <div class="loading-skeleton skeleton-card" style="flex:1;"></div>
+            <div class="loading-skeleton skeleton-card" style="flex:1;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calendar View -->
+      <div class="view-container" id="calendarView">
+        <div class="empty-state">
+          <div class="empty-state-icon">&#9675;</div>
+          <div class="empty-state-title">Calendar</div>
+          <div class="empty-state-message">Loading events...</div>
+          <div style="margin-top: var(--sp-4); display: flex; flex-direction: column; gap: var(--sp-3); width: 100%; max-width: 400px;">
+            <div class="loading-skeleton skeleton-card"></div>
+            <div class="loading-skeleton skeleton-card"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spend View -->
+      <div class="view-container" id="spendView">
+        <div class="empty-state">
+          <div class="empty-state-icon">&#9651;</div>
+          <div class="empty-state-title">Spend Analytics</div>
+          <div class="empty-state-message">Loading usage data...</div>
+          <div style="margin-top: var(--sp-4); width: 100%; max-width: 400px;">
+            <div class="loading-skeleton skeleton-chart"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agents View -->
+      <div class="view-container" id="agentsView">
+        <div class="empty-state">
+          <div class="empty-state-icon">&#11043;</div>
+          <div class="empty-state-title">Agent Infrastructure</div>
+          <div class="empty-state-message">Loading agent status...</div>
+          <div style="margin-top: var(--sp-4); display: flex; gap: var(--sp-3); width: 100%; max-width: 400px;">
+            <div class="loading-skeleton skeleton-card" style="flex:1;"></div>
+            <div class="loading-skeleton skeleton-card" style="flex:1;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Brain View -->
+      <div class="view-container" id="brainView">
+        <div class="empty-state">
+          <div class="empty-state-icon">&#10686;</div>
+          <div class="empty-state-title">Second Brain</div>
+          <div class="empty-state-message">Checking connection to Second Brain API...</div>
+          <div style="margin-top: var(--sp-4); width: 100%; max-width: 400px;">
+            <div class="loading-skeleton skeleton-text medium"></div>
+            <div class="loading-skeleton skeleton-card"></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ============ Modal ============ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle"></div>
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter"></div>
     </div>
+  </div>
 
-    <!-- Toast Notifications -->
-    <div class="toast-container" id="toastContainer"></div>
+  <!-- ============ Toast Container ============ -->
+  <div class="toast-container" id="toastContainer"></div>
 
-    <script>
-        // Password Protection
-        // To change password, update the hash below or set PASSWORD_HASH env var
-        const PASSWORD_HASH = 'EVE2026'; // Change this to your desired password
+  <!-- ============ Scripts ============ -->
+  <!-- Utils first -->
+  <script src="js/utils/dom.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <!-- Data layer -->
+  <script src="js/data/data-service.js"></script>
+  <script src="js/data/task-store.js"></script>
+  <script src="js/data/calendar-store.js"></script>
+  <script src="js/data/spend-store.js"></script>
+  <script src="js/data/agent-store.js"></script>
+  <script src="js/data/brain-store.js"></script>
+  <!-- Components -->
+  <script src="js/components/status-bar.js"></script>
+  <script src="js/components/chart-manager.js"></script>
+  <!-- Views -->
+  <script src="js/views/dashboard-view.js"></script>
+  <script src="js/views/kanban-view.js"></script>
+  <script src="js/views/calendar-view.js"></script>
+  <script src="js/views/spend-view.js"></script>
+  <script src="js/views/agents-view.js"></script>
+  <script src="js/views/brain-view.js"></script>
+  <!-- App shell last (depends on all above) -->
+  <script src="js/app.js"></script>
 
-        function checkPassword() {
-            const input = document.getElementById('password-input');
-            const error = document.getElementById('password-error');
-            const password = input.value;
-
-            if (password === PASSWORD_HASH) {
-                // Correct password
-                sessionStorage.setItem('mc_auth', 'true');
-                document.getElementById('password-overlay').style.display = 'none';
-                document.getElementById('main-app').style.display = 'flex';
-                error.textContent = '';
-            } else {
-                // Wrong password
-                error.textContent = 'Incorrect password';
-                input.value = '';
-                input.focus();
-            }
-        }
-
-        // Check if already authenticated in this session
-        window.addEventListener('DOMContentLoaded', function() {
-            const input = document.getElementById('password-input');
-            
-            if (sessionStorage.getItem('mc_auth') === 'true') {
-                document.getElementById('password-overlay').style.display = 'none';
-                document.getElementById('main-app').style.display = 'flex';
-            } else {
-                input.focus();
-            }
-
-            // Allow Enter key to submit
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    checkPassword();
-                }
-            });
-        });
-    </script>
-
-    <script src="data.js"></script>
-    <script src="kanban.js"></script>
-    <script src="conversations-view.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,287 @@
+/* ============================================
+   Mission Control v3.0 — Second Brain View
+   Search interface, result cards, status banner.
+   ============================================ */
+
+/* ---- Status Banner ---- */
+.brain-status-banner {
+  border-radius: var(--radius-md);
+  padding: var(--sp-3) var(--sp-4);
+  margin-bottom: var(--sp-4);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--text-sm);
+}
+
+.brain-status-online {
+  background: rgba(0, 214, 143, 0.08);
+  border: 1px solid rgba(0, 214, 143, 0.2);
+  color: var(--accent-green);
+}
+
+.brain-status-offline {
+  background: var(--accent-red-dim);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  justify-content: space-between;
+}
+
+.brain-status-offline-text {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--accent-red);
+  font-size: var(--text-sm);
+}
+
+.brain-status-checking {
+  background: var(--accent-amber-dim);
+  border: 1px solid rgba(255, 184, 0, 0.2);
+  color: var(--accent-amber);
+}
+
+.brain-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.brain-status-dot.online { background: var(--accent-green); }
+.brain-status-dot.offline { background: var(--accent-red); }
+
+/* ---- Search Bar ---- */
+.brain-search-bar {
+  margin-bottom: var(--sp-6);
+}
+
+.brain-search-input-wrap {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.brain-search-input {
+  flex: 1;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--text-md);
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.brain-search-input:focus {
+  border-color: var(--accent-purple);
+}
+
+.brain-search-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.brain-search-btn {
+  padding: var(--sp-3) var(--sp-5);
+  background: var(--accent-purple);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  white-space: nowrap;
+}
+
+.brain-search-btn:hover {
+  opacity: 0.9;
+}
+
+.brain-search-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.brain-search-hint {
+  margin-top: var(--sp-3);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-disabled);
+  font-style: italic;
+}
+
+/* ---- Searching State ---- */
+.brain-searching {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  padding: var(--sp-8);
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+}
+
+.brain-searching-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-default);
+  border-top-color: var(--accent-purple);
+  border-radius: var(--radius-full);
+  animation: brain-spin 0.8s linear infinite;
+}
+
+@keyframes brain-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Error / No Results ---- */
+.brain-error {
+  padding: var(--sp-6) var(--sp-4);
+  text-align: center;
+  color: var(--accent-red);
+  font-size: var(--text-sm);
+}
+
+.brain-no-results {
+  padding: var(--sp-8) var(--sp-4);
+  text-align: center;
+  color: var(--text-disabled);
+  font-size: var(--text-sm);
+  font-style: italic;
+}
+
+/* ---- Results ---- */
+.brain-results-header {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-bottom: var(--sp-4);
+}
+
+.brain-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.brain-results-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.brain-group-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ---- Result Card ---- */
+.brain-result-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4) var(--sp-5);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.brain-result-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.brain-result-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-2);
+}
+
+.brain-result-type-badge {
+  font-size: 10px;
+  font-weight: var(--weight-medium);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--accent-purple-dim);
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.brain-result-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brain-result-preview {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--sp-3);
+}
+
+.brain-result-full {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--sp-3);
+  white-space: pre-wrap;
+}
+
+/* ---- Relevance Bar ---- */
+.brain-result-relevance {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+.brain-relevance-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  max-width: 120px;
+}
+
+.brain-relevance-fill {
+  height: 100%;
+  background: var(--accent-purple);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-normal);
+}
+
+.brain-relevance-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+}
+
+/* ---- Metadata ---- */
+.brain-result-meta {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  margin-top: var(--sp-2);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .brain-search-input-wrap {
+    flex-direction: column;
+  }
+
+  .brain-search-btn {
+    width: 100%;
+  }
+}

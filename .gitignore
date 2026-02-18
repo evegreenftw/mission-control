@@ -1,0 +1,12 @@
+# Private data files (contain personal calendar, tasks, spend, conversations)
+tasks.json
+mc-data.json
+model-usage-history.json
+conversations.json
+agents.json
+
+# Temp files from refresh scripts
+.mc-data-temp.json
+
+# OS files
+.DS_Store

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Control v3.0 — Test Suite</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e0e0ee; padding: 24px; }
+    h1 { font-size: 20px; margin-bottom: 8px; }
+    .subtitle { color: #666; font-size: 13px; margin-bottom: 24px; }
+    .summary { display: flex; gap: 16px; margin-bottom: 24px; }
+    .summary-card { padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; }
+    .summary-pass { background: rgba(0,214,143,0.1); color: #00d68f; border: 1px solid rgba(0,214,143,0.2); }
+    .summary-fail { background: rgba(255,107,107,0.1); color: #ff6b6b; border: 1px solid rgba(255,107,107,0.2); }
+    .summary-total { background: rgba(99,91,255,0.1); color: #635bff; border: 1px solid rgba(99,91,255,0.2); }
+    table { width: 100%; border-collapse: collapse; background: #12121a; border: 1px solid #2a2a3a; border-radius: 8px; overflow: hidden; }
+    th { text-align: left; padding: 10px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #666; border-bottom: 1px solid #2a2a3a; }
+    td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #1a1a24; }
+    tr:last-child td { border-bottom: none; }
+    .pass { color: #00d68f; }
+    .fail { color: #ff6b6b; }
+    .group-header { background: #1a1a24; }
+    .group-header td { font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; }
+    .details { font-size: 11px; color: #888; font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body>
+
+  <h1>Mission Control v3.0 — Test Suite</h1>
+  <div class="subtitle">Automated validation and integration tests</div>
+
+  <div class="summary" id="summary"></div>
+  <table id="resultsTable">
+    <thead>
+      <tr><th>Test Name</th><th>Status</th><th>Details</th></tr>
+    </thead>
+    <tbody id="resultsBody"></tbody>
+  </table>
+
+  <!-- Load app scripts in order -->
+  <script src="js/utils/dom.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/data/data-service.js"></script>
+  <script src="js/data/task-store.js"></script>
+  <script src="js/data/calendar-store.js"></script>
+  <script src="js/data/spend-store.js"></script>
+  <script src="js/data/agent-store.js"></script>
+  <script src="js/data/brain-store.js"></script>
+  <script src="js/components/chart-manager.js"></script>
+  <script src="js/components/status-bar.js"></script>
+
+  <script>
+    /* ============================================
+       Test Runner
+       ============================================ */
+    var tests = [];
+    var passed = 0;
+    var failed = 0;
+
+    function group(name) {
+      tests.push({ group: name });
+    }
+
+    function test(name, fn) {
+      tests.push({ name: name, fn: fn });
+    }
+
+    function assert(condition, msg) {
+      if (!condition) throw new Error(msg || 'Assertion failed');
+    }
+
+    function assertEqual(actual, expected, msg) {
+      if (actual !== expected) {
+        throw new Error((msg || 'assertEqual') + ': expected ' + JSON.stringify(expected) + ', got ' + JSON.stringify(actual));
+      }
+    }
+
+    function assertContains(str, substring) {
+      if (String(str).indexOf(substring) === -1) {
+        throw new Error('Expected "' + str + '" to contain "' + substring + '"');
+      }
+    }
+
+    /* ============================================
+       Validator Tests
+       ============================================ */
+
+    group('Task Validator');
+
+    test('Valid task passes validation', function() {
+      var result = validateTask({
+        id: 'task-1',
+        title: 'Fix login bug',
+        status: 'in-progress',
+        priority: 'high',
+        createdAt: '2026-01-15T10:00:00Z'
+      });
+      assert(result.valid, 'Should be valid');
+      assertEqual(result.errors.length, 0);
+    });
+
+    test('Task with v2 status "todo" passes', function() {
+      var result = validateTask({
+        id: 'task-2',
+        title: 'Old task',
+        status: 'todo'
+      });
+      assert(result.valid, 'v2 status should be accepted');
+    });
+
+    test('Task with v2 status "inProgress" passes', function() {
+      var result = validateTask({
+        id: 'task-3',
+        title: 'In progress task',
+        status: 'inProgress'
+      });
+      assert(result.valid, 'v2 inProgress status should be accepted');
+    });
+
+    test('Task missing title fails', function() {
+      var result = validateTask({ id: 'task-4', status: 'backlog' });
+      assert(!result.valid, 'Should fail without title');
+      assertContains(result.errors.join(','), 'title');
+    });
+
+    test('Task with empty title fails', function() {
+      var result = validateTask({ id: 'task-5', title: '   ', status: 'backlog' });
+      assert(!result.valid, 'Should fail with whitespace title');
+    });
+
+    test('Task with invalid status fails', function() {
+      var result = validateTask({ id: 'task-6', title: 'Test', status: 'invalid-status' });
+      assert(!result.valid, 'Should fail with invalid status');
+      assertContains(result.errors.join(','), 'Invalid status');
+    });
+
+    test('Task with invalid priority fails', function() {
+      var result = validateTask({ id: 'task-7', title: 'Test', priority: 'urgent' });
+      assert(!result.valid, 'Should fail with invalid priority');
+      assertContains(result.errors.join(','), 'Invalid priority');
+    });
+
+    test('null input fails validation', function() {
+      var result = validateTask(null);
+      assert(!result.valid, 'null should fail');
+    });
+
+    test('Non-object input fails', function() {
+      var result = validateTask('hello');
+      assert(!result.valid, 'string should fail');
+    });
+
+    group('Calendar Event Validator');
+
+    test('Valid calendar event passes', function() {
+      var result = validateCalendarEvent({
+        summary: 'Team standup',
+        start: '2026-02-18T09:00:00Z',
+        end: '2026-02-18T09:30:00Z'
+      });
+      assert(result.valid, 'Should be valid');
+    });
+
+    test('Event with title field (v3) passes', function() {
+      var result = validateCalendarEvent({
+        title: 'Meeting',
+        start: '2026-02-18T10:00:00Z',
+        end: '2026-02-18T11:00:00Z'
+      });
+      assert(result.valid, 'title field should be accepted');
+    });
+
+    test('Event missing summary/title fails', function() {
+      var result = validateCalendarEvent({
+        start: '2026-02-18T09:00:00Z',
+        end: '2026-02-18T09:30:00Z'
+      });
+      assert(!result.valid, 'Should fail without summary');
+      assertContains(result.errors.join(','), 'summary/title');
+    });
+
+    test('Event missing start fails', function() {
+      var result = validateCalendarEvent({
+        summary: 'Meeting',
+        end: '2026-02-18T09:30:00Z'
+      });
+      assert(!result.valid, 'Should fail without start');
+    });
+
+    test('Event with invalid date fails', function() {
+      var result = validateCalendarEvent({
+        summary: 'Meeting',
+        start: 'not-a-date',
+        end: '2026-02-18T09:30:00Z'
+      });
+      assert(!result.valid, 'Should fail with invalid date');
+    });
+
+    group('Spend Data Validator');
+
+    test('Valid spend data passes', function() {
+      var result = validateSpendData({
+        allTime: { opus: { count: 10, cost: 5.50 } },
+        byDay: { '2026-02-17': { opus: { count: 2, cost: 1.10 } } },
+        totalCost: 5.50
+      });
+      assert(result.valid, 'Should be valid');
+    });
+
+    test('Spend data missing allTime fails', function() {
+      var result = validateSpendData({
+        byDay: {},
+        totalCost: 0
+      });
+      assert(!result.valid, 'Should fail without allTime');
+    });
+
+    test('Spend data missing totalCost fails', function() {
+      var result = validateSpendData({
+        allTime: {},
+        byDay: {}
+      });
+      assert(!result.valid, 'Should fail without totalCost');
+    });
+
+    test('Valid spend day entry passes', function() {
+      var result = validateSpendDayEntry('2026-02-17', {
+        opus: { count: 5, cost: 2.50 },
+        sonnet: { count: 3, cost: 0.90 }
+      });
+      assert(result.valid, 'Should be valid');
+    });
+
+    test('Spend day entry with NaN cost fails', function() {
+      var result = validateSpendDayEntry('2026-02-17', {
+        opus: { count: 5, cost: NaN }
+      });
+      assert(!result.valid, 'Should fail with NaN cost');
+    });
+
+    test('Spend day entry with missing count fails', function() {
+      var result = validateSpendDayEntry('2026-02-17', {
+        opus: { cost: 2.50 }
+      });
+      assert(!result.valid, 'Should fail without count');
+    });
+
+    test('Spend day entry with invalid date key fails', function() {
+      var result = validateSpendDayEntry('not-a-date', {
+        opus: { count: 1, cost: 0.50 }
+      });
+      assert(!result.valid, 'Should fail with invalid date key');
+    });
+
+    group('Agent Validator');
+
+    test('Valid agent passes', function() {
+      var result = validateAgent({
+        id: 'agent-1',
+        name: 'ResearchBot',
+        type: 'subagent',
+        status: 'active'
+      });
+      assert(result.valid, 'Should be valid');
+    });
+
+    test('Agent missing name fails', function() {
+      var result = validateAgent({
+        id: 'agent-2',
+        type: 'subagent',
+        status: 'idle'
+      });
+      assert(!result.valid, 'Should fail without name');
+    });
+
+    test('Agent with invalid type fails', function() {
+      var result = validateAgent({
+        id: 'agent-3',
+        name: 'Bot',
+        type: 'invalid-type'
+      });
+      assert(!result.valid, 'Should fail with invalid type');
+    });
+
+    test('Agent with invalid status fails', function() {
+      var result = validateAgent({
+        id: 'agent-4',
+        name: 'Bot',
+        type: 'subagent',
+        status: 'broken'
+      });
+      assert(!result.valid, 'Should fail with invalid status');
+    });
+
+    /* ============================================
+       Chart Manager Tests
+       ============================================ */
+
+    group('Chart Manager');
+
+    test('chartManager starts with 0 charts', function() {
+      chartManager.destroyAll();
+      assertEqual(chartManager.count(), 0);
+    });
+
+    test('chartManager.get returns null for missing chart', function() {
+      assertEqual(chartManager.get('nonexistent'), null);
+    });
+
+    test('chartManager.destroy on missing ID does not throw', function() {
+      chartManager.destroy('doesnt-exist');
+      assert(true, 'Should not throw');
+    });
+
+    /* ============================================
+       DOM Utility Tests
+       ============================================ */
+
+    group('DOM Utilities');
+
+    test('escapeHtml escapes HTML entities', function() {
+      var result = escapeHtml('<script>alert("xss")</script>');
+      assertContains(result, '&lt;');
+      assertContains(result, '&gt;');
+      assertContains(result, '&quot;');
+      assert(result.indexOf('<script>') === -1, 'Should not contain raw script tag');
+    });
+
+    test('escapeHtml handles null/undefined', function() {
+      assertEqual(escapeHtml(null), '');
+      assertEqual(escapeHtml(undefined), '');
+    });
+
+    test('formatCurrency formats dollars', function() {
+      var result = formatCurrency(5.5);
+      assertContains(result, '5.50');
+      assertContains(result, '$');
+    });
+
+    test('formatCurrency handles zero', function() {
+      var result = formatCurrency(0);
+      assertContains(result, '$0.00');
+    });
+
+    test('generateId returns a string', function() {
+      var id = generateId();
+      assert(typeof id === 'string', 'Should return string');
+      assert(id.length > 0, 'Should not be empty');
+    });
+
+    test('generateId returns unique values', function() {
+      var id1 = generateId();
+      var id2 = generateId();
+      assert(id1 !== id2, 'Two IDs should be different');
+    });
+
+    /* ============================================
+       SpendStore Tests (with mock data)
+       ============================================ */
+
+    group('SpendStore');
+
+    test('SpendStore: hasData returns false when empty', function() {
+      var store = new SpendStore();
+      assert(!store.hasData(), 'Should have no data');
+    });
+
+    test('SpendStore: totalForPeriod returns null when empty', function() {
+      var store = new SpendStore();
+      store.loaded = true;
+      assertEqual(store.totalForPeriod('week'), null);
+    });
+
+    test('SpendStore: byModel returns empty array when no raw data', function() {
+      var store = new SpendStore();
+      store.loaded = true;
+      var models = store.byModel('all');
+      assertEqual(models.length, 0);
+    });
+
+    test('SpendStore: _mapAllTime excludes NaN entries', function() {
+      var store = new SpendStore();
+      var result = store._mapAllTime({
+        opus: { count: 5, cost: 2.50 },
+        bad: { count: NaN, cost: 1.00 },
+        also_bad: { count: 3, cost: NaN }
+      });
+      assertEqual(result.length, 1, 'Should only include valid entry');
+      assertEqual(result[0].model, 'opus');
+    });
+
+    /* ============================================
+       AgentStore Tests
+       ============================================ */
+
+    group('AgentStore');
+
+    test('AgentStore: always has primary after _ensurePrimary', function() {
+      var store = new AgentStore();
+      store.agents = [];
+      store._ensurePrimary();
+      var primary = store.agents.find(function(a) { return a.type === 'primary'; });
+      assert(primary !== undefined, 'Should have primary');
+      assertEqual(primary.name, 'OpenClaw');
+    });
+
+    test('AgentStore: does not duplicate primary', function() {
+      var store = new AgentStore();
+      store.agents = [{
+        id: 'openclaw-primary',
+        name: 'OpenClaw',
+        type: 'primary',
+        status: 'active',
+        capabilities: []
+      }];
+      store._ensurePrimary();
+      var primaries = store.agents.filter(function(a) { return a.type === 'primary'; });
+      assertEqual(primaries.length, 1, 'Should have exactly one primary');
+    });
+
+    test('AgentStore: getActiveCount works', function() {
+      var store = new AgentStore();
+      store.agents = [
+        { id: '1', name: 'A', type: 'primary', status: 'active' },
+        { id: '2', name: 'B', type: 'subagent', status: 'idle' },
+        { id: '3', name: 'C', type: 'subagent', status: 'active' }
+      ];
+      assertEqual(store.getActiveCount(), 2);
+    });
+
+    test('AgentStore: getSubagents filters correctly', function() {
+      var store = new AgentStore();
+      store.agents = [
+        { id: '1', name: 'OpenClaw', type: 'primary', status: 'active' },
+        { id: '2', name: 'Bot', type: 'subagent', status: 'idle' }
+      ];
+      var subs = store.getSubagents();
+      assertEqual(subs.length, 1);
+      assertEqual(subs[0].name, 'Bot');
+    });
+
+    /* ============================================
+       Model Colors / Display Names
+       ============================================ */
+
+    group('Model Constants');
+
+    test('MODEL_COLORS has entries for known models', function() {
+      assert(MODEL_COLORS.opus !== undefined, 'opus should have color');
+      assert(MODEL_COLORS.sonnet !== undefined, 'sonnet should have color');
+      assert(MODEL_COLORS.haiku !== undefined, 'haiku should have color');
+    });
+
+    test('MODEL_DISPLAY_NAMES has entries for known models', function() {
+      assertEqual(MODEL_DISPLAY_NAMES.opus, 'Claude Opus');
+      assertEqual(MODEL_DISPLAY_NAMES.sonnet, 'Claude Sonnet');
+    });
+
+    /* ============================================
+       Run Tests
+       ============================================ */
+
+    (function runTests() {
+      var body = document.getElementById('resultsBody');
+      var html = '';
+
+      tests.forEach(function(t) {
+        if (t.group) {
+          html += '<tr class="group-header"><td colspan="3">' + t.group + '</td></tr>';
+          return;
+        }
+
+        var status, details;
+        try {
+          t.fn();
+          status = 'pass';
+          details = '';
+          passed++;
+        } catch (e) {
+          status = 'fail';
+          details = e.message;
+          failed++;
+        }
+
+        var icon = status === 'pass' ? '\u2705' : '\u274C';
+        html += '<tr>';
+        html += '<td>' + t.name + '</td>';
+        html += '<td class="' + status + '">' + icon + ' ' + status.toUpperCase() + '</td>';
+        html += '<td class="details">' + details + '</td>';
+        html += '</tr>';
+      });
+
+      body.innerHTML = html;
+
+      // Summary
+      var total = passed + failed;
+      var summaryEl = document.getElementById('summary');
+      summaryEl.innerHTML =
+        '<div class="summary-card summary-total">Total: ' + total + '</div>' +
+        '<div class="summary-card summary-pass">Passed: ' + passed + '</div>' +
+        '<div class="summary-card summary-fail">Failed: ' + failed + '</div>';
+    })();
+  </script>
+</body>
+</html>
