@@ -1,29 +1,7 @@
 {
-  "refreshedAt": "2026-02-18T07:53:22Z",
+  "refreshedAt": "2026-02-18T17:52:27Z",
   "today": "2026-02-18",
   "calendar": {"events": [
-  {
-    "id": "5fkf93k83tf3gs4lvkd05052kg_20260218T140000Z",
-    "summary": "Morning Routine",
-    "start": "2026-02-18T07:00:00-07:00",
-    "end": "2026-02-18T07:30:00-07:00",
-    "all_day": false,
-    "location": null,
-    "description": null,
-    "attendees": [],
-    "html_link": "https://www.google.com/calendar/event?eid=NWZrZjkzazgzdGYzZ3M0bHZrZDA1MDUya2dfMjAyNjAyMThUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
-  },
-  {
-    "id": "606nd4eflj6115mrubn2t7hf7r_20260218T143000Z",
-    "summary": "Deep Learning",
-    "start": "2026-02-18T07:30:00-07:00",
-    "end": "2026-02-18T10:00:00-07:00",
-    "all_day": false,
-    "location": null,
-    "description": null,
-    "attendees": [],
-    "html_link": "https://www.google.com/calendar/event?eid=NjA2bmQ0ZWZsajYxMTVtcnVibjJ0N2hmN3JfMjAyNjAyMThUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
-  },
   {
     "id": "3qtpi89g0emsl9q48mjp86ki5l_20260219T010000Z",
     "summary": "498 Capstone Huddle",
@@ -478,6 +456,28 @@
     "description": null,
     "attendees": [],
     "html_link": "https://www.google.com/calendar/event?eid=MzNmNmFjdjZta25pcTU1cWg4czI4OXBic3JfMjAyNjAzMDNUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "5fkf93k83tf3gs4lvkd05052kg_20260304T140000Z",
+    "summary": "Morning Routine",
+    "start": "2026-03-04T07:00:00-07:00",
+    "end": "2026-03-04T07:30:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NWZrZjkzazgzdGYzZ3M0bHZrZDA1MDUya2dfMjAyNjAzMDRUMTQwMDAwWiB0eWxlcmRpYWwxODE4QG0"
+  },
+  {
+    "id": "606nd4eflj6115mrubn2t7hf7r_20260304T143000Z",
+    "summary": "Deep Learning",
+    "start": "2026-03-04T07:30:00-07:00",
+    "end": "2026-03-04T10:00:00-07:00",
+    "all_day": false,
+    "location": null,
+    "description": null,
+    "attendees": [],
+    "html_link": "https://www.google.com/calendar/event?eid=NjA2bmQ0ZWZsajYxMTVtcnVibjJ0N2hmN3JfMjAyNjAzMDRUMTQzMDAwWiB0eWxlcmRpYWwxODE4QG0"
   }
 ]},
   "gitActivity": [
@@ -527,18 +527,18 @@
   },
   {
     "model": "sonnet",
-    "count": 98559,
-    "cost": 3695.95
+    "count": 98637,
+    "cost": 3698.8749999999995
   },
   {
     "model": "haiku",
-    "count": 37285,
-    "cost": 372.8399999999997
+    "count": 37330,
+    "cost": 373.2899999999997
   },
   {
     "model": "minimax",
-    "count": 7874,
-    "cost": 15.331599999999877
+    "count": 7875,
+    "cost": 15.333499999999876
   },
   {
     "model": "deepseek",
@@ -558,19 +558,11 @@
 ],
   "dailyCounts": [
   {
-    "date": "2026-02-17",
-    "sessions": 1
-  },
-  {
-    "date": "2026-02-16",
-    "sessions": 1
-  },
-  {
-    "date": "2026-02-06",
+    "date": "2026-02-18",
     "sessions": 1
   }
 ],
-  "totalCost": 4481.761599999999
+  "totalCost": 4485.138499999999
 },
   "tasks": {
   "tasks": [
