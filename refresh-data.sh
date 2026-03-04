@@ -2,7 +2,8 @@
 # Mission Control Data Refresh Script
 # Pulls real data from multiple sources and updates mc-data.json
 
-set -e
+# Don't exit on error - we want to handle failures gracefully
+set +e
 
 MC_DIR="$(dirname "$0")"
 DATA_FILE="$MC_DIR/mc-data.json"
@@ -17,7 +18,13 @@ SEVEN_DAYS_AGO=$(date -v-7d +%Y-%m-%d 2>/dev/null || date -d "7 days ago" +%Y-%m
 
 # 1. Get calendar events for next 14 days
 echo "📅 Fetching calendar events..."
-CALENDAR_EVENTS=$(python3 ~/.openclaw/sandboxes/agent-main-0d71ad7a/google-calendar-integration/calendar_api.py upcoming --days 14 --json 2>/dev/null || echo '[]')
+CALENDAR_OUTPUT=$(python3 ~/.openclaw/sandboxes/agent-main-0d71ad7a/google-calendar-integration/calendar_api.py upcoming --days 14 --json 2>&1)
+if echo "$CALENDAR_OUTPUT" | jq . > /dev/null 2>&1; then
+  CALENDAR_EVENTS="$CALENDAR_OUTPUT"
+else
+  echo "⚠️  Calendar error (token likely expired), using empty events"
+  CALENDAR_EVENTS='[]'
+fi
 CALENDAR_DATA=$(echo "{\"events\": $CALENDAR_EVENTS}")
 
 # 2. Get git activity from workspace
@@ -103,10 +110,10 @@ EOF
 fi
 
 # 6. Build the JSON data file
-echo "💬 Extracting conversations...
+echo "💬 Extracting conversations..."
 ./extract-conversations.sh 2>/dev/null || echo "⚠️ Could not extract conversations"
 
-📦 Building data file..."
+echo "📦 Building data file..."
 cat > "$TEMP_FILE" << EOF
 {
   "refreshedAt": "$REFRESH_TIME",
